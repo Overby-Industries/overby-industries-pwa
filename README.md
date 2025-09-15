@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Overby Engineering Playbook  
+**“Map & Compass for the Civic Space Age”**
 
-## Getting Started
+---
 
-First, run the development server:
+## 🌌 Guiding Principles
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Safety First** → everything tested in steps: simulation → bench → unmanned → crewed.  
+2. **Truth in Physics** → no unverified sci-fi, all based on credible physics & tested models.  
+3. **Open Transparency** → all code open, reviewed, tested; science belongs to *We the People of Earth*.  
+4. **Redundancy** → no single points of failure – languages, frameworks, and pipelines defined with alternatives.  
+5. **Adaptive Evolution** → allow for iteration, fallback paths, and new tools.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛰 System Map
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ⚡ Propulsion & Power (MHD, Lorentz, ABEP)
+- **Research / Early Sims** → Python (NumPy/SciPy, JAX, PyTorch for physics models).  
+- **Production** → Rust (safety, concurrency in plasma control loops) or C++ (performance, legacy libs).  
+- **GPU / Numerical** → CUDA/OpenCL when HPC needed.  
+- **Testing** → Unit tests (pytest, doctest), integration sims, HIL (Hardware‑In‑Loop).
 
-## Learn More
+### ⛏ Asteroid Miner Systems
+- **Miner Control OS (embedded)** → C (RTOS, microcontrollers), Rust for safe concurrency.  
+- **Robotics and AI nav** → ROS2 (Python for training, C++ for deployment).  
+- **Testing** → Hardware simulation (Gazebo/IsaacSim), property‑based tests (Hypothesis), fuzz testing for safety.
 
-To learn more about Next.js, take a look at the following resources:
+### 🛰 Orbital Systems
+- **SatNav Swarm** → Network simulation in Python (NS3, OMNET++). Deployment stack in C++/Rust.  
+- **Starlifter OS** → Rust + WebAssembly (fleet operations plugins).  
+- **Control Panel** → Next.js/React, real data over GraphQL/WebSockets.  
+- **Testing** → Network stress simulation, satellite-in-loop software validation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🌍 ISRU & Infrastructure
+- **Regolith Processing** → Python FEM sims (FEniCS), with HPC scale in Fortran/C++.  
+- **Titan Hydrocarbon Plants** → Chemical process modeling in Python (Cantera), final control in C/C++.  
+- **Testing** → Lab-scale prototypes, software twins, continuous integration pipelines with chemical “digital twin” validation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔬 Civic + Knowledge Systems
+- **White Papers** → LaTeX + Markdown workflows, auto‑PDF in CI.  
+- **Simulation Archive** → Jupyter Notebooks, tagged & versioned.  
+- **Governance** → Next.js web portal, integrated with repo badges and socials.  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧭 Language & Framework Compass
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **High-level Research** → Python, Julia.  
+- **Embedded** → C, C++, Rust.  
+- **Control OSes** → Rust (future‑proof safety), fallback to C++ (compatibility).  
+- **Simulations/HPC** → CUDA/OpenCL/Fortran/C++ HPC, fallback to Julia.  
+- **Robotics** → ROS2 (Python+CPP).  
+- **Web / UI** → Next.js / React, WASM for embedded fleet ops.  
+
+---
+
+## ✅ Testing Philosophy
+
+- **Unit & Property Tests** (pytest, unittest, Hypothesis).  
+- **Integration Testing** (Simulators → ROS2 Gazebo, NS‑3 networks, Cantera for chemistry).  
+- **Hardware‑in‑Loop (HIL)**: embed simulation harness into physical controllers.  
+- **Fuzz Testing**: stress edge cases (AFL, libFuzzer).  
+- **Verification Simulation**: all propulsion/ISRU models validated w/ digital twins before lab hardware.  
+- **Redundancy Simulation**: failover paths tested in fault injection harnesses.  
+- ❗ *Never deploy crewed hardware until each unmanned stage has survived simulated + real stress cycles*.  
+
+---
+
+## 🔮 Alternatives Map
+
+- **Simulation** → Julia as an alternative to Python for performance research.  
+- **Embedded** → Zephyr RTOS vs FreeRTOS; C vs Rust.  
+- **Networking** → Rust vs Go vs Erlang/Elixir for distributed ops.  
+- **UI Layer** → Next.js vs Flutter Web.  
+
+---
+
+## 🌟 Roadmap (v0.1 → v1.0)
+
+1. Draft system maps for each major domain.  
+2. Collect recommended libraries and testing harnesses.  
+3. Implement repo‑specific `REPO_CONVENTIONS.md` (defines tools/stack locally).  
+4. Launch Titan Moonbase AAA Visualization (Three.js + Shaders).  
+5. Publish Engine Playbook v1.0 as living document.  
+
+---

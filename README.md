@@ -1,5 +1,11 @@
-# Overby Industries PWA  
-**“Map & Compass for the Civic Space Age”**
+# 📱 Overby Industries PWA Landing
+Next.js
+TypeScript
+TailwindCSS
+PWA Ready
+GitHub Actions
+
+A Progressive Web App (PWA) landing site for Overby Industries — blazing fast, installable, and built on Next.js App Router with TailwindCSS
 
 ---
 

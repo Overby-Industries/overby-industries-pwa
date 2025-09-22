@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Overby Industries',
+  manifest: "/manifest.webmanifest",
   description: 'Building a Sustainable, Ethical Industrial Future in Space 🌌',
 };
 

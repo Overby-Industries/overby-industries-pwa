@@ -1,8 +1,8 @@
 import Hero from "./components/Hero";
 import Vision from "./components/Vision";
 import WhyOverby from "./components/WhyOverby";
-import Roadmap from "./components/Roadmap";
 import Contribute from "./components/Contribute";
+import RoadmapScroll from "./components/RoadmapScroll";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <WhyOverby />
 
       {/* ROADMAP */}
-      <Roadmap />
+      <RoadmapScroll />
 
       {/* CONTRIBUTION / CTA */}
       <Contribute />

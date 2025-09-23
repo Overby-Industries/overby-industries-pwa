@@ -39,12 +39,12 @@ export default function SignupForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 outline-none"
+        className="w-full px-4 py-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 outline-none"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 disabled:opacity-50"
+        className="px-4 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 disabled:opacity-50"
       >
         {status === "loading" ? "Submitting..." : "Join"}
       </button>

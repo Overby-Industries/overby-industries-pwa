@@ -1,26 +1,30 @@
-import Hero from "./components/Hero";
-import Vision from "./components/Vision";
-import WhyOverby from "./components/WhyOverby";
-import Contribute from "./components/Contribute";
-import RoadmapScroll from "./components/RoadmapScroll";
+import Hero from './landing-page/Hero';
+import Vision from './landing-page/Vision';
+import WhyOverby from './landing-page/WhyOverby';
+import Contribute from './landing-page/Contribute';
+import RoadmapScroll from './landing-page/RoadmapScroll';
+// import NavBar from "./components/NavBar";
+// import HeroSection from "./components/HeroSection";
+// import WhitePaperPreview from "./components/WhitePaperPreview";
+import Footer from './components/Footer';
+import Starfield from './components/Starfield';
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-gray-950 text-white">
+    <main className="relative bg-black min-h-screen text-white overflow-hidden">
+      <Starfield />
+      {/* <NavBar /> */}
       {/* HERO */}
       <Hero />
-
       {/* VISION */}
       <Vision />
-
       {/* WHY OVERBY */}
       <WhyOverby />
-
       {/* ROADMAP */}
       <RoadmapScroll />
-
       {/* CONTRIBUTION / CTA */}
       <Contribute />
+      <Footer />
     </main>
   );
 }

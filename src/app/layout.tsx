@@ -14,8 +14,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Overby Industries',
-  manifest: "/manifest.webmanifest",
+  manifest: "/site.webmanifest",
   description: 'Building a Sustainable, Ethical Industrial Future in Space 🌌',
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

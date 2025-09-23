@@ -1,0 +1,6 @@
+<svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Arrowhead body -->
+  <polygon points="50,5 90,85 50,70 10,85" fill="#06b6d4"/>
+  <!-- Inner cutout for sleekness -->
+  <polygon points="50,15 75,80 50,65 25,80" fill="#0f172a"/>
+</svg>

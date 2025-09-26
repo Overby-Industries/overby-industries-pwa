@@ -8,11 +8,12 @@ import RoadmapScroll from './landing-page/RoadmapScroll';
 // import WhitePaperPreview from "./components/WhitePaperPreview";
 import Footer from './components/Footer';
 import Starfield from './components/Starfield';
+import HeroLogo from './components/HeroLogo';
 
 export default function Home() {
   return (
     <main className="relative bg-black min-h-screen text-white overflow-hidden">
-      <Starfield />
+      <HeroLogo />
       {/* <NavBar /> */}
       {/* HERO */}
       <Hero />
@@ -24,6 +25,7 @@ export default function Home() {
       <RoadmapScroll />
       {/* CONTRIBUTION / CTA */}
       <Contribute />
+      <Starfield />
       <Footer />
     </main>
   );

@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function NavBar() {
   return (
@@ -12,7 +12,9 @@ export default function NavBar() {
           height={80}
           priority={true}
         />
-        <span className="text-xl font-bold text-cyan-400">Overby Industries</span>
+        <span className="text-xl font-bold text-cyan-400">
+          Overby Industries
+        </span>
       </Link>
     </nav>
   );

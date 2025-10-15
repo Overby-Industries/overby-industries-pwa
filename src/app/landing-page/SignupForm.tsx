@@ -1,30 +1,32 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function SignupForm() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("loading");
+    setStatus('loading');
 
     try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
 
       if (res.ok) {
-        setStatus("success");
-        setEmail("");
+        setStatus('success');
+        setEmail('');
       } else {
-        setStatus("error");
+        setStatus('error');
       }
     } catch (err) {
-      setStatus("error");
+      setStatus('error');
     }
   };
 
@@ -43,18 +45,18 @@ export default function SignupForm() {
       />
       <button
         type="submit"
-        disabled={status === "loading"}
+        disabled={status === 'loading'}
         className="px-4 py-4 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 disabled:opacity-50"
       >
-        {status === "loading" ? "Submitting..." : "Join"}
+        {status === 'loading' ? 'Submitting...' : 'Join'}
       </button>
 
-      {status === "success" && (
+      {status === 'success' && (
         <p className="text-green-400 text-sm mt-2 sm:mt-0 text-center">
           ✅ Thanks! You’re subscribed.
         </p>
       )}
-      {status === "error" && (
+      {status === 'error' && (
         <p className="text-red-400 text-sm mt-2 sm:mt-0 text-center">
           ❌ Something went wrong. Try again.
         </p>

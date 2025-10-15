@@ -31,9 +31,8 @@ const nextConfig = {
   //   disableStaticImages: true, // <-- allows import of SVG as a component *and* as a static image
   // },
 
-// -------------------------------------------------
+  // -------------------------------------------------
   // Any other Next.js config options can go here
-
 };
 // -------------------------------------------------
 // 4️⃣  Wrap the config with PWA

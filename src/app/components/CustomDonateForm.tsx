@@ -1,27 +1,27 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function CustomDonateForm() {
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   const handleDonate = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
+    setError('');
 
     const dollars = parseFloat(amount);
     if (isNaN(dollars) || dollars < 1) {
-      setError("Please enter a donation of at least $1.");
+      setError('Please enter a donation of at least $1.');
       return;
     }
 
     setLoading(true);
     try {
-      const res = await fetch("/api/donate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/donate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: Math.round(dollars * 100) }), // convert to cents
       });
       const data = await res.json();
@@ -29,11 +29,11 @@ export default function CustomDonateForm() {
       if (data.url) {
         window.location.href = data.url;
       } else {
-        setError("Something went wrong, please try again.");
+        setError('Something went wrong, please try again.');
         setLoading(false);
       }
     } catch (err) {
-      setError("Server error, please try again.");
+      setError('Server error, please try again.');
       setLoading(false);
     }
   };
@@ -58,7 +58,7 @@ export default function CustomDonateForm() {
         disabled={loading}
         className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition disabled:opacity-50"
       >
-        {loading ? "Redirecting..." : "Donate"}
+        {loading ? 'Redirecting...' : 'Donate'}
       </button>
     </form>
   );

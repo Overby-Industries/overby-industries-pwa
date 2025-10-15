@@ -1,6 +1,6 @@
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import { getUpdateBySlug, getAllUpdates } from "@/lib/getUpdates";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { getUpdateBySlug, getAllUpdates } from '@/lib/getUpdates';
 
 export async function generateStaticParams() {
   const updates = getAllUpdates();

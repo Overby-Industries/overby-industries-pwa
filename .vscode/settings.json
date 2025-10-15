@@ -4,7 +4,7 @@
 
   // Run ESLint autofixes on save
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
+    "source.fixAll.eslint": "always"
   },
 
   // Enable ESLint validation in these files

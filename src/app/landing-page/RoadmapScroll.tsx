@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useRef, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { roadmap } from "../content/roadmap";
+import { useRef, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { roadmap } from '../content/roadmap';
 
 export default function RoadmapScroll() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,8 +18,8 @@ export default function RoadmapScroll() {
       container.scrollLeft += e.deltaY;
     };
 
-    container.addEventListener("wheel", onWheel, { passive: false });
-    return () => container.removeEventListener("wheel", onWheel);
+    container.addEventListener('wheel', onWheel, { passive: false });
+    return () => container.removeEventListener('wheel', onWheel);
   }, []);
 
   return (
@@ -30,7 +30,7 @@ export default function RoadmapScroll() {
       <div
         ref={containerRef}
         className="flex overflow-x-auto no-scrollbar px-4 space-x-8 snap-x snap-mandatory"
-        style={{ scrollBehavior: "smooth" }}
+        style={{ scrollBehavior: 'smooth' }}
       >
         {roadmap.map((milestone, idx) => (
           <RoadmapCard
@@ -59,7 +59,7 @@ function RoadmapCard({
 
   useEffect(() => {
     if (inView) {
-      controls.start("visible");
+      controls.start('visible');
     }
   }, [inView, controls]);
 
@@ -72,7 +72,7 @@ function RoadmapCard({
         hidden: { opacity: 0, y: 40 },
         visible: { opacity: 1, y: 0 },
       }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       className="min-w-[18rem] md:min-w-[24rem] lg:min-w-[28rem] flex-shrink-0 
                 bg-gray-900 border border-gray-700 rounded-xl p-6 snap-start 
                 hover:scale-105 hover:bg-gray-800 transition-transform duration-300"

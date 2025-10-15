@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { getAllUpdates } from "@/lib/getUpdates";
+import Link from 'next/link';
+import { getAllUpdates } from '@/lib/getUpdates';
 
 export default function UpdatesPage() {
   const updates = getAllUpdates();
@@ -19,7 +19,7 @@ export default function UpdatesPage() {
             </Link>
             <p className="text-gray-400 text-sm">{update.date}</p>
             <p className="text-gray-300 mt-2 line-clamp-2">
-              {update.description || ""}
+              {update.description || ''}
             </p>
           </li>
         ))}

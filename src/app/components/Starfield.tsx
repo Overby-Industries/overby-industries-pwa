@@ -1,4 +1,4 @@
-import ShootingStars from "./ShootingStars";
+import ShootingStars from './ShootingStars';
 
 export default function Starfield() {
   return (

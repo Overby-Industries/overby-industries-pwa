@@ -1,7 +1,7 @@
 // components/HeroLogo.tsx
 // import Logo from '@/public/svg/overby-wordmark-gradient.svg';
 import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Hero() {
   return (

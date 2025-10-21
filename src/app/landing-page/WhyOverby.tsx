@@ -1,10 +1,10 @@
 export default function WhyOverby() {
   return (
-    <section className="py-4 px-4 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-6">
+    <section className="px-4 py-4 text-center">
+      <h2 className="mb-6 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">
         Why Overby?
       </h2>
-      <ul className="text-lg text-gray-300 space-y-4 max-w-3xl mx-auto">
+      <ul className="mx-auto max-w-3xl space-y-4 text-lg text-gray-300">
         <li>Ethical, Zero-Waste Operations</li>
         <li>Full-Spectrum ISRU: metals, stone, plastics, fuels</li>
         <li>Reusable Shuttle Fleet: Starlifter II with runway landings</li>

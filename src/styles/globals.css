@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
   --background: #f9f9f9;
@@ -110,7 +110,7 @@ body {
 /* Shooting star base */
 .shooting-stars::before,
 .shooting-stars::after {
-  content: '';
+  content: "";
   /* position:  absolute to allow multiple shooting stars */
   top: -10%;
   left: -10%;

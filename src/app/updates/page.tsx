@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { getAllUpdates } from '@/lib/getUpdates';
+import Link from "next/link";
+import { getAllUpdates } from "@/lib/getUpdates";
 
 export default function UpdatesPage() {
   const updates = getAllUpdates();
 
   return (
-    <main className="bg-gray-950 text-gray-200 py-16 px-6 md:px-12 lg:px-24">
-      <h1 className="text-4xl font-extrabold text-cyan-400 mb-12">
+    <main className="bg-gray-950 px-6 py-16 text-gray-200 md:px-12 lg:px-24">
+      <h1 className="mb-12 text-4xl font-extrabold text-cyan-400">
         Project Updates
       </h1>
       <ul className="space-y-8">
@@ -17,9 +17,9 @@ export default function UpdatesPage() {
                 {update.title}
               </h2>
             </Link>
-            <p className="text-gray-400 text-sm">{update.date}</p>
-            <p className="text-gray-300 mt-2 line-clamp-2">
-              {update.description || ''}
+            <p className="text-sm text-gray-400">{update.date}</p>
+            <p className="mt-2 line-clamp-2 text-gray-300">
+              {update.description || ""}
             </p>
           </li>
         ))}

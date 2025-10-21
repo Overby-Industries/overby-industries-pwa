@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-gray-950">
+    <nav className="flex items-center justify-between bg-gray-950 px-6 py-4">
       <Link href="/" className="flex items-center gap-3">
         <Image
           src="/public/icons/android-chrome-192x192.png"

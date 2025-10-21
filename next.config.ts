@@ -1,5 +1,5 @@
 // next.config.ts
-import withPWA from 'next-pwa';
+import withPWA from "next-pwa";
 
 // -------------------------------------------------
 // 1️⃣  Plain Next.js config (will be wrapped later)
@@ -22,7 +22,7 @@ const nextConfig = {
       test: /\.svg$/i,
       // Only apply the loader when the import is from a JS/TS file (not from CSS, etc.)
       issuer: /\.[jt]sx?$/,
-      use: ['@svgr/webpack'],
+      use: ["@svgr/webpack"],
     });
 
     // Important: return the modified config object
@@ -44,8 +44,8 @@ const nextConfig = {
 // 4️⃣  Wrap the config with PWA
 // -------------------------------------------------
 const withPWANextConfig = withPWA({
-  dest: 'public',
-  disable: process.env.NODE_ENV === 'development', // PWA disabled in dev
+  dest: "public",
+  disable: process.env.NODE_ENV === "development", // PWA disabled in dev
   register: true,
   skipWaiting: true,
 });

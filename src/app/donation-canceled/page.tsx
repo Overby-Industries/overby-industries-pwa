@@ -1,6 +1,6 @@
 export default function Canceled() {
   return (
-    <main className="bg-gray-950 text-white h-screen flex items-center justify-center">
+    <main className="flex h-screen items-center justify-center bg-gray-950 text-white">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-red-400">
           ❌ Donation Canceled

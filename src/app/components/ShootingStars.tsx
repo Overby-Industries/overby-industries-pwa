@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface Star {
   id: number;
@@ -31,11 +31,11 @@ export default function ShootingStars() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       {stars.map((star) => (
         <div
           key={star.id}
-          className="absolute w-1 h-1 rounded-full bg-white shadow-[0_0_6px_2px_rgba(255,255,255,0.8)]"
+          className="absolute h-1 w-1 rounded-full bg-white shadow-[0_0_6px_2px_rgba(255,255,255,0.8)]"
           style={{
             top: `${star.top}%`,
             left: `${star.left}%`,

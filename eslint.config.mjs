@@ -1,16 +1,16 @@
 // eslint.config.js
-import pluginJs from '@eslint/js';
-import nextPlugin from '@next/eslint-plugin-next';
-import importPlugin from 'eslint-plugin-import';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import pluginJs from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
+import importPlugin from "eslint-plugin-import";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default [
   {
-    ignores: ['node_modules', '.next', 'dist', 'out', 'next-env.d.ts'],
+    ignores: ["node_modules", ".next", "dist", "out", "next-env.d.ts"],
   },
   {
-    extends: ['eslint:recommended', 'next'],
+    extends: ["eslint:recommended", "some-other-config", "prettier", "next"],
   },
   pluginJs.configs.recommended, // JS recommended
   ...tseslint.configs.recommended, // TS recommended
@@ -21,34 +21,36 @@ export default [
     },
     rules: {
       // ✅ Style / Safety
-      semi: ['error', 'always'],
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'no-unused-vars': 'warn',
-      'prefer-const': 'error',
-      eqeqeq: ['error', 'always'],
-      curly: ['error', 'all'],
+      semi: ["error", "always"],
+      quotes: ["error", "double"],
+      "jsx-quotes": ["error", "prefer-double"],
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+      "no-unused-vars": "warn",
+      "prefer-const": "error",
+      eqeqeq: ["error", "always"],
+      curly: ["error", "all"],
 
       // ✅ Import order
-      'import/order': [
-        'warn',
+      "import/order": [
+        "warn",
         {
           groups: [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
           ],
-          'newlines-between': 'always',
-          alphabetize: { order: 'asc', caseInsensitive: true },
+          "newlines-between": "always",
+          alphabetize: { order: "asc", caseInsensitive: true },
         },
       ],
 
       // ✅ TypeScript strictness
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-non-null-assertion": "warn",
     },
     languageOptions: {
       parser: tseslint.parser,

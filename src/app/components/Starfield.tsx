@@ -1,8 +1,8 @@
-import ShootingStars from './ShootingStars';
+import ShootingStars from "./ShootingStars";
 
 export default function Starfield() {
   return (
-    <div className="absolute inset-0 overflow-hidden -z-10 bg-black">
+    <div className="absolute inset-0 -z-10 overflow-hidden bg-black">
       {/* Layer 1: tiny far stars */}
       <div className="stars animate-twinkle"></div>
       {/* Layer 2: medium stars */}

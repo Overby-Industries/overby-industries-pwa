@@ -1,21 +1,20 @@
-import RSS from 'rss';
+import RSS from "rss";
 
-import { getAllUpdates } from './getUpdates';
-
+import { getAllUpdates } from "./getUpdates";
 
 export function generateFeeds() {
   const updates = getAllUpdates();
 
-  const siteUrl = 'https://overbyindustries.space'; // replace with actual domain
+  const siteUrl = "https://overbyindustries.space"; // replace with actual domain
 
   // Create RSS feed
   const feed = new RSS({
-    title: 'Overby Industries Updates',
+    title: "Overby Industries Updates",
     description:
-      'Ethical space resource utilization and project development log',
+      "Ethical space resource utilization and project development log",
     site_url: siteUrl,
     feed_url: `${siteUrl}/updates/feed.xml`,
-    language: 'en',
+    language: "en",
     pubDate: new Date(),
     ttl: 60,
   });
@@ -23,7 +22,7 @@ export function generateFeeds() {
   updates.forEach((update: any) => {
     feed.item({
       title: update.title,
-      description: update.description || '',
+      description: update.description || "",
       url: `${siteUrl}/updates/${update.slug}`,
       date: update.date,
     });

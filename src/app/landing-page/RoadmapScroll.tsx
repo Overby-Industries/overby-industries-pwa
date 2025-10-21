@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useRef, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { roadmap } from '../content/roadmap';
+import { useRef, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { roadmap } from "../content/roadmap";
 
 export default function RoadmapScroll() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,19 +18,19 @@ export default function RoadmapScroll() {
       container.scrollLeft += e.deltaY;
     };
 
-    container.addEventListener('wheel', onWheel, { passive: false });
-    return () => container.removeEventListener('wheel', onWheel);
+    container.addEventListener("wheel", onWheel, { passive: false });
+    return () => container.removeEventListener("wheel", onWheel);
   }, []);
 
   return (
-    <section className="py-4 text-white text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-8">
+    <section className="py-4 text-center text-white">
+      <h2 className="mb-8 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">
         Our Roadmap to the Future
       </h2>
       <div
         ref={containerRef}
-        className="flex overflow-x-auto no-scrollbar px-4 space-x-8 snap-x snap-mandatory"
-        style={{ scrollBehavior: 'smooth' }}
+        className="no-scrollbar flex snap-x snap-mandatory space-x-8 overflow-x-auto px-4"
+        style={{ scrollBehavior: "smooth" }}
       >
         {roadmap.map((milestone, idx) => (
           <RoadmapCard
@@ -59,7 +59,7 @@ function RoadmapCard({
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [inView, controls]);
 
@@ -72,14 +72,12 @@ function RoadmapCard({
         hidden: { opacity: 0, y: 40 },
         visible: { opacity: 1, y: 0 },
       }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="min-w-[18rem] md:min-w-[24rem] lg:min-w-[28rem] flex-shrink-0 
-                bg-gray-900 border border-gray-700 rounded-xl p-6 snap-start 
-                hover:scale-105 hover:bg-gray-800 transition-transform duration-300"
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="min-w-[18rem] flex-shrink-0 snap-start rounded-xl border border-gray-700 bg-gray-900 p-6 transition-transform duration-300 hover:scale-105 hover:bg-gray-800 md:min-w-[24rem] lg:min-w-[28rem]"
     >
       <h3 className="text-xl font-bold text-cyan-400">{year}</h3>
-      <h4 className="text-2xl font-semibold mt-2">{title}</h4>
-      <p className="text-gray-300 mt-4">{description}</p>
+      <h4 className="mt-2 text-2xl font-semibold">{title}</h4>
+      <p className="mt-4 text-gray-300">{description}</p>
     </motion.div>
   );
 }

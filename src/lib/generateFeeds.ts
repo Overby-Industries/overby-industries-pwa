@@ -1,5 +1,7 @@
-import { getAllUpdates } from './getUpdates';
 import RSS from 'rss';
+
+import { getAllUpdates } from './getUpdates';
+
 
 export function generateFeeds() {
   const updates = getAllUpdates();

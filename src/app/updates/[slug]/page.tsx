@@ -1,4 +1,4 @@
-import ReactMarkdown from "react-markdown";
+/*import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getUpdateBySlug, getAllUpdates } from "@/lib/getUpdates";
 
@@ -24,4 +24,4 @@ export default async function UpdatePage({ params }: UpdatePageProps) {
       </article>
     </main>
   );
-}
+}*/

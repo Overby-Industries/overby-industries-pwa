@@ -13,7 +13,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 
-
   // -----------------------------------------------------------------
   // 2️⃣  Add webpack rule for SVGs using @svgr/webpack
   // -----------------------------------------------------------------

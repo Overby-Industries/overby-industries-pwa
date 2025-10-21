@@ -9,6 +9,9 @@ export default [
   {
     ignores: ['node_modules', '.next', 'dist', 'out', 'next-env.d.ts'],
   },
+  {
+    extends: ['eslint:recommended', 'next'],
+  },
   pluginJs.configs.recommended, // JS recommended
   ...tseslint.configs.recommended, // TS recommended
   {

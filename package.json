@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "test": "echo \"No tests yet\" && exit 0",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint . --fix",
     "format": "prettier --write .",
     "prepare": "husky",
     "postbuild": "next-sitemap"

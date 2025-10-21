@@ -19,7 +19,6 @@ export default [
     rules: {
       // ✅ Style / Safety
       semi: ['error', 'always'],
-      quotes: ['error', 'double', { avoidEscape: true }],
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-unused-vars': 'warn',
       'prefer-const': 'error',

@@ -1,9 +1,13 @@
-/*import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getUpdateBySlug, getAllUpdates } from "@/lib/getUpdates";
 
-type UpdatePageProps = {
+/*type UpdatePageProps = {
   params: Promise<{ slug: any }>;
+};*/
+
+type UpdatePageProps = {
+  params: { slug: any };
 };
 
 export async function generateStaticParams() {
@@ -12,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 export default async function UpdatePage({ params }: UpdatePageProps) {
-  const { slug } = await params;
+  const { slug } = params;
   const { content, metadata } = getUpdateBySlug(slug);
 
   return (
@@ -24,4 +28,4 @@ export default async function UpdatePage({ params }: UpdatePageProps) {
       </article>
     </main>
   );
-}*/
+}

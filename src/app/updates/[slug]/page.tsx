@@ -4,7 +4,7 @@ import { getUpdateBySlug, getAllUpdates } from "@/lib/getUpdates";
 
 export async function generateStaticParams() {
   const updates = getAllUpdates();
-  return updates.map((u: any) => ({ slug: u.slug }));
+  return updates.map((u: { slug: string }) => ({ slug: u.slug }));
 }
 
 export default function UpdatePage({ params }: { params: { slug: string } }) {

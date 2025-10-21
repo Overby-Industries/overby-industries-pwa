@@ -7,20 +7,13 @@
     "build": "next build",
     "test": "echo \"No tests yet\" && exit 0",
     "start": "next start",
-    "lint": "eslint . --fix",
     "format": "prettier --write .",
     "prepare": "husky",
     "postbuild": "next-sitemap"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write"
-    ]
-  },
+  "*.{json,css,md}": [
+    "prettier --write"
+  ],
   "dependencies": {
     "@tailwindcss/typography": "^0.5.18",
     "framer-motion": "^12.23.16",

@@ -7,13 +7,13 @@ type UpdatePageProps = {
 };
 
 export async function generateStaticParams() {
-  const updates = getAllUpdates();
+  const updates = await getAllUpdates(); // ✅ ensure awaited if async
   return updates.map((u: { slug: string }) => ({ slug: u.slug }));
 }
 
 export default async function UpdatePage({ params }: UpdatePageProps) {
   const { slug } = params;
-  const { content, metadata } = getUpdateBySlug(slug);
+  const { content, metadata } = await getUpdateBySlug(slug); // ✅ await if async
 
   return (
     <main className="bg-gray-950 px-6 py-16 text-gray-200 md:px-12 lg:px-24">

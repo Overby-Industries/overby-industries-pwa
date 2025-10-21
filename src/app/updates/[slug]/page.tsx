@@ -3,12 +3,12 @@ import remarkGfm from "remark-gfm";
 import { getUpdateBySlug, getAllUpdates } from "@/lib/getUpdates";
 
 type UpdatePageProps = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: any }>;
 };
 
 export async function generateStaticParams() {
   const updates = getAllUpdates();
-  return updates.map((u: { slug: string }) => ({ slug: u.slug }));
+  return updates.map((u: { slug: any }) => ({ slug: u.slug }));
 }
 
 export default async function UpdatePage({ params }: UpdatePageProps) {

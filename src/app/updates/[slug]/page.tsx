@@ -2,13 +2,18 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getUpdateBySlug, getAllUpdates } from "@/lib/getUpdates";
 
+type UpdatePageProps = {
+  params: Promise<{ slug: string }>;
+};
+
 export async function generateStaticParams() {
   const updates = getAllUpdates();
   return updates.map((u: { slug: string }) => ({ slug: u.slug }));
 }
 
-export default function UpdatePage({ params }: { params: { slug: string } }) {
-  const { content, metadata } = getUpdateBySlug(params.slug);
+export default async function UpdatePage({ params }: UpdatePageProps) {
+  const { slug } = await params;
+  const { content, metadata } = getUpdateBySlug(slug);
 
   return (
     <main className="bg-gray-950 px-6 py-16 text-gray-200 md:px-12 lg:px-24">

@@ -1,21 +1,15 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { getUpdateBySlug, getAllUpdates } from "@/lib/getUpdates"; // these are sync now
+import { getAllUpdates, getUpdateBySlug } from "@/lib/getUpdates";
 
-// This tells Next what valid slugs exist at build time
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
+export async function generateStaticParams() {
   const updates = getAllUpdates();
   return updates.map((u: { slug: string }) => ({
     slug: u.slug,
   }));
 }
 
-// The page component: receives params directly
-export default async function UpdatePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function UpdatePage({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const { content, metadata } = getUpdateBySlug(slug);
 

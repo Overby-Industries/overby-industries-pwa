@@ -20,7 +20,7 @@ export default function HeroLogo() {
         </h1>
       </div>
       <p className="flex flex-col justify-center text-center text-lg text-gray-400 md:flex-row">
-        Sustainable • Ethical • Zero-Waste Space Industry
+        Aerospace • ISRU • Heavy Industry
       </p>
     </div>
   );

@@ -45,7 +45,7 @@ export default function RootLayout({
           title="Overby Industries JSON Feed"
           href="/updates/feed.json"
         />
-        <meta name="theme-color" content="#000000" />
+        <meta name="msapplication-TileColor" content="#000000" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

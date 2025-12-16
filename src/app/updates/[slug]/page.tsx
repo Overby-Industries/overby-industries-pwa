@@ -1,27 +1,60 @@
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import { getAllUpdates, getUpdateBySlug } from "@/lib/getUpdates";
+import React from "react";
+import { Metadata } from "next";
 
-type Params = Promise<{ slug: string }>;
+interface UpdatePageProps {
+  params: {
+    slug: string;
+  };
+}
+
+interface Update {
+  slug: string;
+  title: string;
+  summary: string;
+  [key: string]: any;
+}
+
+interface UpdateDetailsProps {
+  update: Update;
+}
+
+function UpdateDetails({ update }: UpdateDetailsProps) {
+  return (
+    <div>
+      <h1>{update.title}</h1>
+      <p>{update.summary}</p>
+    </div>
+  );
+}
+
+export async function generateMetadata({
+  params,
+}: UpdatePageProps): Promise<Metadata> {
+  const res = await fetch(`https://api.example.com/updates/${params.slug}`);
+  const update = await res.json();
+
+  return {
+    title: update.title,
+    description: update.summary,
+  };
+}
+
+export default async function UpdatePage({ params }: UpdatePageProps) {
+  const res = await fetch(`https://api.example.com/updates/${params.slug}`);
+  const update = await res.json();
+
+  return <UpdateDetails update={update} />;
+}
 
 export async function generateStaticParams() {
-  const updates = getAllUpdates();
-  return updates.map((u: { slug: string }) => ({
-    slug: u.slug,
+  const res = await fetch("https://api.example.com/updates");
+  const updates = await res.json();
+
+  return updates.map((update: { slug: string }) => ({
+    slug: update.slug,
   }));
 }
 
-export default async function Page(props: { params: Promise<{ slug: string }> }) {
-  const { slug } = await props.params;
-  const { content, metadata } = getUpdateBySlug(slug);
+export const revalidate = 3600; // Revalidate every hour
 
-  return (
-    <main className="bg-gray-950 px-6 py-16 text-gray-200 md:px-12 lg:px-24">
-      <article className="prose prose-invert prose-headings:text-cyan-400 prose-a:text-cyan-300 prose-strong:text-white max-w-none">
-        <h1>{metadata.title}</h1>
-        <p className="text-sm text-gray-400">{metadata.date}</p>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-      </article>
-    </main>
-  );
-}
+// Note: Ensure that the API endpoints used in the fetch calls are replaced with actual endpoints relevant to your application.

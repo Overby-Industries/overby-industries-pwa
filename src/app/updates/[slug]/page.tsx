@@ -2,6 +2,8 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getAllUpdates, getUpdateBySlug } from "@/lib/getUpdates";
 
+type Params = Promise<{ slug: string }>;
+
 export async function generateStaticParams() {
   const updates = getAllUpdates();
   return updates.map((u: { slug: string }) => ({

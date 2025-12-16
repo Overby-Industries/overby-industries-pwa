@@ -3,12 +3,12 @@ import { Metadata } from "next";
 
 interface UpdatePageProps {
   params: {
-    slug: string;
+    slug: any;
   };
 }
 
 interface Update {
-  slug: string;
+  slug: any;
   title: string;
   summary: string;
   [key: string]: any;

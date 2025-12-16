@@ -1,5 +1,5 @@
 // app/sitemap.ts
-import { getAllUpdates } from '@/lib/getUpdates';
+/** import { getAllUpdates } from '@/lib/getUpdates';
 
 export default async function sitemap() {
   const baseUrl = 'https://overbyindustries.space'; // 🔁 CHANGE THIS to your actual domain
@@ -19,4 +19,4 @@ export default async function sitemap() {
     },
     ...updateRoutes,
   ];
-}
+} **/

@@ -5,10 +5,10 @@ export default function NavBar() {
   return (
     <div className="my-4 flex min-h-full w-full flex-col items-center justify-center">
       <div className="flex min-h-3/4 w-full flex-col items-center justify-center p-4 md:flex-row">
-        <Link href="/" className="flex items-center gap-3">
-        <h1 className="flex h-38 w-fit flex-col items-center justify-center bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-7xl">
+      <h1 className="flex h-38 w-fit flex-col items-center justify-center bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-7xl">
             Overby Industries
           </h1>
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/overby-logo-neon.svg"
             alt="Overby Industries logo"
@@ -21,7 +21,6 @@ export default function NavBar() {
             priority
           />
           </Link>
-            
       </div>
       <span className="mt-2 text-center text-sm italic text-white/70">- Work In Progress - Under Construction - Thank You For Visiting -</span>
       <nav className="mb-4 flex w-full max-w-4xl flex-wrap items-center justify-center gap-6 px-4 text-lg font-medium text-white">

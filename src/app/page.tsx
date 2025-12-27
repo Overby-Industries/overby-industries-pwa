@@ -1,5 +1,4 @@
-import HeroLogo from "./components/HeroLogo";
-
+import NavBar from "./components/NavBar";
 import Hero from "./landing-page/Hero";
 import Vision from "./landing-page/Vision";
 import WhyOverby from "./landing-page/WhyOverby";
@@ -11,13 +10,11 @@ import RoadmapScroll from "./components/RoadmapScroll";
 import Footer from "./components/Footer";
 import Starfield from "./components/Starfield";
 
-
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      <HeroLogo />
       {/* <NavBar /> */}
-    
+      <NavBar />
       {/* VISION */}
       <Vision />
       {/* WHY OVERBY */}

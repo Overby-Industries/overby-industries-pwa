@@ -9,7 +9,8 @@ export default function WhyOverby() {
         <li>Full-Spectrum ISRU: metals, stone, plastics, fuels</li>
         <li>Reusable Shuttle Fleet: Starlifter II with runway landings</li>
         <li>Advanced Propulsion: Ion, Lorentz, & Solar Wind Capture</li>
-        <li>Open to Everyone: crowdfunded + investor-driven support</li>
+        <li>Modular, Scalable Industrial Platforms</li>
+        <li>Commitment to Open-Source Tech & Collaboration</li>
       </ul>
     </section>
   );

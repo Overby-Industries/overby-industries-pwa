@@ -20,8 +20,9 @@ export default function NavBar() {
           </Link>
           <h1 className="flex h-38 w-fit flex-col items-center justify-center bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-7xl">
             Overby Industries
-          </h1>
+          </h1>  
       </div>
+      <span className="mt-2 text-center text-sm italic text-white/70">- Work In Progress - Under Construction - Thank You For Visiting -</span>
       <nav className="mb-4 flex w-full max-w-4xl flex-wrap items-center justify-center gap-6 px-4 text-lg font-medium text-white">
       <Link href="/aerospace" className="flex items-center justify-center px-3 py-2 hover:underline">
         <h2>Aerospace</h2>

@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function HeroLogo() {
   return (
-    <div className="flex flex-col items-center justify-center p-4">
-      <div className="flex h-38 w-full flex-col items-center justify-center p-4 md:h-38 md:flex-row">
+    <div className="flex flex-col my-4 w-full min-h-full items-center justify-center">
+      <div className="flex flex-col md:flex-row w-full min-h-3/4 items-center justify-center p-4">
         <Image
           src="/overby-logo-neon.svg"
           alt="Overby Industries logo"
@@ -15,7 +15,7 @@ export default function HeroLogo() {
           unoptimized // tells Next.js not to try to process the SVG
           priority
         />
-        <h1 className="flex h-fit w-full flex-col bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text pt-2 text-center text-5xl font-extrabold text-transparent md:text-7xl">
+        <h1 className="flex h-38 w-full flex-col bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text pt-2 text-center text-5xl md:text-7xl font-extrabold text-transparent">
           Overby Industries
         </h1>
       </div>

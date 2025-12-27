@@ -7,15 +7,15 @@ export default function HeroLogo() {
         <Image
           src="/overby-logo-neon.svg"
           alt="Overby Industries logo"
-          width={100} // set to the actual height of your SVG
-          height={100}
+          width={80} // set to the actual height of your SVG
+          height={80}
           // fill    // fills the parent dimensions
           // style={{ objectFit: "contain" }} // keep aspect ratio inside the box
           // layout="responsive"
           unoptimized // tells Next.js not to try to process the SVG
           priority
         />
-        <h1 className="flex h-38 w-full flex-col bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text pt-2 text-center text-5xl md:text-7xl font-extrabold text-transparent">
+        <h1 className="flex h-38 w-fit flex-col items-center justify-center bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-center text-5xl md:text-7xl font-extrabold text-transparent">
           Overby Industries
         </h1>
       </div>

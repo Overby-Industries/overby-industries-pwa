@@ -17,8 +17,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
       <HeroLogo />
       {/* <NavBar /> */}
-      {/* HERO */}
-      <Hero />
+    
       {/* VISION */}
       <Vision />
       {/* WHY OVERBY */}
@@ -27,6 +26,8 @@ export default function Home() {
       <RoadmapScroll />
       {/* CONTRIBUTION / CTA */}
       <Contribute />
+      {/* HERO */}
+      <Hero />
       <Starfield />
       <Footer />
     </main>

@@ -8,7 +8,6 @@ import RoadmapScroll from "./components/RoadmapScroll";
 // import HeroSection from "./components/HeroSection";
 // import WhitePaperPreview from "./components/WhitePaperPreview";
 import Footer from "./components/Footer";
-import Starfield from "./components/Starfield";
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
       <Contribute />
       {/* HERO */}
       <Hero />
-      <Starfield />
       <Footer />
     </main>
   );

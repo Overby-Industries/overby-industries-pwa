@@ -9,7 +9,7 @@ export default function Vision() {
         ethically, sustainably, and with zero waste. From metals and concrete on
         asteroids, to hydrocarbons on Titan, our mission is to provide
         everything humanity needs to build an interplanetary civilization
-        without harming Earth.
+        without harming Earth or the solar system itself.
       </p>
     </section>
   );

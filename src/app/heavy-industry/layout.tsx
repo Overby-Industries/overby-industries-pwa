@@ -1,6 +1,6 @@
 import SubNavbar from "../components/SubNavbar";
 
-export default function HeavyIndustriesLayout({
+export default function HeavyIndustryLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -8,12 +8,12 @@ export default function HeavyIndustriesLayout({
   return (
     <>
       <SubNavbar
-        title="Heavy Industries"
+        title="Heavy Industry"
         links={[
-          { label: "Asteroid Mining", href: "/heavy-industries/asteroid-mining" },
-          { label: "Space Debris Reclamation", href: "/heavy-industries/space-debris-reclamation" },
-          { label: "Advanced Manufacturing", href: "/heavy-industries/advanced-manufacturing" },
-          { label: "Robotics", href: "/heavy-industries/robotics" },
+          { label: "Asteroid Mining", href: "/heavy-industry/asteroid-mining" },
+          { label: "Space Debris Reclamation", href: "/heavy-industry/space-debris-reclamation" },
+          { label: "Advanced Manufacturing", href: "/heavy-industry/advanced-manufacturing" },
+          { label: "Robotics", href: "/heavy-industry/robotics" },
         ]}
       />
       {children}

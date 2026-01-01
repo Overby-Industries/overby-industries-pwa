@@ -47,9 +47,7 @@ export default function NavBar() {
           <h2>Heavy Industry</h2>
         </Link>
         <a
-          href="mailto:youremail@example.com
-    ?subject=Overby%20Industries%20Services%20Inquiry
-    &body=Hello,%0A%0AI’m%20interested%20in%20investing%20in%20your%20space%20debris%20reclamation%20services."
+          href="mailto:founder@overbyindustries.space?subject=Overby%20Industries%20Services%20Inquiry&body=Hello,%0A%0AI’m%20interested%20in%20investing%20in%20your%20space%20debris%20reclamation%20services."
           className="rounded-lg bg-cyan-500 px-4 py-4 transition hover:bg-cyan-600"
         >
           Contact

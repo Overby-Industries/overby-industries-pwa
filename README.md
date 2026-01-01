@@ -4,7 +4,6 @@
 
 Work in progress, if you would like to contribute, but do not know how to help, the PWA needs:
 
-- email contact and email subscribers needs work, they currently do not work.
 - The PWA needs a working investments and donations button to accept monetary contributions.
 - The RoadmapScroll does not work as intended, needs work.
 - The Navbar links need some work to improve the responsiveness of the PWA.

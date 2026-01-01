@@ -17,7 +17,7 @@ export default function SubNavbar({
     <div className="border-b border-gray-800 bg-gray-950">
       <div className="mx-auto max-w-7xl px-8 py-4">
         <div className="flex min-h-3/4 w-full flex-col items-center justify-center p-4 md:flex-row">
-        <h1 className="flex h-38 w-fit flex-col items-center justify-center bg-gradient-to-r from-violet-700 to-violet-600 bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-7xl">
+        <h1 className="flex h-38 w-fit flex-col items-center justify-center bg-gradient-to-r from-violet-800 to-violet-500 bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-7xl">
           Overby Industries
         </h1>
         <Link href="/" className="flex items-center gap-3">

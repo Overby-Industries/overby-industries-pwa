@@ -3,7 +3,7 @@ import Hero from "./landing-page/Hero";
 import Vision from "./landing-page/Vision";
 import WhyOverby from "./landing-page/WhyOverby";
 import Contribute from "./landing-page/Contribute";
-import RoadmapScroll from "./components/RoadmapScroll";
+import RoadmapScroll from "./components/Roadmap";
 // import WhitePaperPreview from "./components/WhitePaperPreview";
 import Footer from "./components/Footer";
 import { createClient } from "../utils/supabase/server";

@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <div className="my-4 flex min-h-full w-full flex-col items-center justify-center">
       <div className="flex min-h-3/4 w-full flex-col items-center justify-center p-4 md:flex-row">
-        <h1 className="flex h-38 w-fit flex-col items-center justify-center bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-7xl">
+        <h1 className="flex h-38 w-fit flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-cyan-300 bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-7xl">
           Overby Industries
         </h1>
         <Link href="/" className="flex items-center gap-3">
@@ -46,6 +46,14 @@ export default function NavBar() {
         >
           <h2>Heavy Industry</h2>
         </Link>
+
+        <Link
+          href="/the-gravastar-project"
+          className="rounded-lg bg-gradient-to-r from-emerald-600 to-25% hover:bg-emerald-400 items-center justify-center px-3 py-2 hover:underline"
+        >
+          <h2>The Gravastar Project</h2>
+        </Link>
+
         <a
           href="mailto:founder@overbyindustries.space?subject=Overby%20Industries%20Services%20Inquiry&body=Hello,%0A%0AI’m%20interested%20in%20investing%20in%20your%20space%20debris%20reclamation%20services."
           className="rounded-lg bg-cyan-500 px-4 py-4 transition hover:bg-cyan-600"

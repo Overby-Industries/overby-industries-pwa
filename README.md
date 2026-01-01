@@ -5,8 +5,6 @@
 Work in progress, if you would like to contribute, but do not know how to help, the PWA needs:
 
 - The PWA needs a working investments and donations button to accept monetary contributions.
-- The RoadmapScroll does not work as intended, needs work.
-- The Navbar links need some work to improve the responsiveness of the PWA.
 
 I created a working developer branch for all new work to be done, please clone the: dev branch, make your changes then push a pull request.
 

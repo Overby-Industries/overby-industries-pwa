@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Inter, Orbitron } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import "../styles/globals.css";
 
 const inter = Inter({
@@ -35,6 +36,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -53,6 +55,7 @@ export default function RootLayout({
         className={`${inter.variable} ${orbitron.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

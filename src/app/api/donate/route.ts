@@ -5,11 +5,22 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: "2025-12-15.clover",
 });
 
-export async function POST() {
+export async function POST(req: Request) {
   try {
+    const { amount } = await req.json();
+
+    const amountInCents = Math.round(Number(amount) * 1);
+
+    if (!amountInCents || amountInCents < 100) {
+      return NextResponse.json(
+        { error: "Invalid donation amount" },
+        { status: 400 }
+      );
+    }
+
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
       mode: "payment",
+      payment_method_types: ["card"],
       line_items: [
         {
           price_data: {
@@ -17,7 +28,7 @@ export async function POST() {
             product_data: {
               name: "Donation to Overby Industries",
             },
-            unit_amount: 2000, // $20 donation (in cents)
+            unit_amount: amountInCents,
           },
           quantity: 1,
         },
@@ -28,6 +39,10 @@ export async function POST() {
 
     return NextResponse.json({ url: session.url });
   } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 });
+    console.error("Stripe error:", err);
+    return NextResponse.json(
+      { error: "Stripe checkout failed" },
+      { status: 500 }
+    );
   }
 }

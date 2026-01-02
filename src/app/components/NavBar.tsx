@@ -47,6 +47,13 @@ export default function NavBar() {
           <h2>Heavy Industry</h2>
         </Link>
 
+         <Link
+          href="/whitepapers"
+          className="flex items-center justify-center px-3 py-2 hover:underline"
+        >
+          <h2>White Papers</h2>
+        </Link>
+
         <Link
           href="/the-gravastar-project"
           className="rounded-lg bg-gradient-to-r from-emerald-600 to-25% hover:bg-emerald-400 items-center justify-center px-3 py-2 hover:underline"

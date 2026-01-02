@@ -17,10 +17,6 @@ export default function Contribute() {
       <div className="mt-4 flex flex-col justify-center gap-4 sm:flex-row">
         <div className="flex flex-col md:flex-row justify-center gap-4 p-4">
           <CustomDonateForm />
-          <DonateButton amount={500} />
-          <DonateButton amount={1000} />
-          <DonateButton amount={2000} />
-          <DonateButton amount={10000} />
         </div>
       </div>
       <SignupForm />

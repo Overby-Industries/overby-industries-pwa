@@ -5,7 +5,7 @@ export default function Success() {
         <h1 className="text-4xl font-bold text-green-400">✅ Thank you!</h1>
         <p className="mt-4 text-lg text-gray-300">
           Your donation supports ethical, zero-waste resource development in
-          space.
+          space, thank you!
         </p>
       </div>
     </main>

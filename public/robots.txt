@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://overbyindustries.space
+
+# Sitemaps
+Sitemap: https://overbyindustries.space/sitemap.xml

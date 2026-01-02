@@ -22,12 +22,12 @@ export default async function Home() {
       <Vision />
       {/* WHY OVERBY */}
       <WhyOverby />
+      <Hero />
       {/* ROADMAP */}
       <RoadmapScroll />
       {/* CONTRIBUTION / CTA */}
       <Contribute />
       {/* HERO */}
-      <Hero />
       <Footer />
     </main>
   );

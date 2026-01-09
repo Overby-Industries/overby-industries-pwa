@@ -20,7 +20,7 @@ export default function AerospacePage() {
                         priority
                       />
             <p className="max-w-2xl text-gray-300 m-4">
-              Project Helga is a blended wing lifting body design optimised for stable hypersonic flight, but also is designed for stable flight at slower flight envelopes such as landing approach or flying in the traffic pattern. 
+              Project Helga is a blended wing lifting body design optimised for stable hypersonic flight, but also, designed for stable flight at slower flight envelopes such as landing approach or flying in the traffic pattern. 
               
             </p>
             <Image

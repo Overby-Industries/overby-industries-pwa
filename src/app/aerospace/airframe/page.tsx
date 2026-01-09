@@ -6,7 +6,7 @@ export default function AirframePage() {
     <section className="px-8 py-20 text-white">
       <h1 className="text-4xl font-bold m-4">Airframe</h1>
       <p className="max-w-2xl text-gray-300 m-4">
-        Overby Industries presents Project Helga, a powered flight SSTO Heavy Lift Shuttle that takes off and lands on traditional runways, featuring a hypersonic spline airfoil designed for optimal performance in the upper atmosphere. 
+        Overby Industries presents Project Helga, a powered flight SSTO Heavy Lift Shuttle that takes off and lands on traditional runways, featuring a hypersonic double delta spline airfoil designed for optimal performance in the upper atmosphere. 
       </p>
       <Image
                   src="/helga.png"

@@ -6,10 +6,10 @@ export default function AirframePage() {
     <section className="px-8 py-20 text-white">
       <h1 className="text-4xl font-bold m-4">Airframe</h1>
       <p className="max-w-2xl text-gray-300 m-4">
-        Overby Industries presents Project Helga, a powered flight SSTO Heavy Lift Shuttle that takes off and lands on traditional runways, featuring a hypersonic double delta spline airfoil designed for optimal performance in the upper atmosphere. 
+        Overby Industries presents Project Helga, a powered flight SSTO Heavy Lift Shuttle that takes off and lands on traditional runways, featuring a hypersonic double delta airfoil designed for optimal performance in the upper atmosphere. 
       </p>
       <Image
-                  src="/helga.png"
+                  src="/project-helga.png"
                   alt="Project Helga spline airfoil design"
                   width={1600} // set to the actual height of your SVG
                   height={1600}
@@ -24,7 +24,7 @@ export default function AirframePage() {
         
       </p>
       <Image
-                  src="/helga-top-view.png"
+                  src="/helga-top.png"
                   alt="Project Helga spline airfoil design"
                   width={1600} // set to the actual height of your SVG
                   height={1600}
@@ -39,7 +39,7 @@ export default function AirframePage() {
         
       </p>
       <Image
-                  src="/helga-spline-foil-starboard-side-profile-view.png"
+                  src="/helga-port-side.png"
                   alt="Project Helga spline airfoil design"
                   width={1600} // set to the actual height of your SVG
                   height={1600}
@@ -54,7 +54,7 @@ export default function AirframePage() {
         With a slight dihedral for stability and a slight canted sweep forward on the trailing edge for a stable high angle of attack re-entry profile, the airframe is optimized for both performance and safety.
       </p>
       <Image
-                  src="/helga-rear.png"
+                  src="/helga-front.png"
                   alt="Project Helga spline airfoil design"
                   width={1600} // set to the actual height of your SVG
                   height={1600}

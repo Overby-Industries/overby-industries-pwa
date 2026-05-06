@@ -50,7 +50,7 @@ export default function AerospacePage() {
                         priority
                       />
             <p className="max-w-2xl text-gray-300 m-4">
-              The spline airfoil design allows for efficient flight at hypersonic speeds, making it ideal for rapid deployment of payloads to orbit.
+              The airfoil design allows for efficient flight at hypersonic speeds, making it ideal for rapid deployment of payloads to orbit.
               With a slight dihedral for stability and a slight canted sweep forward on the trailing edge for a stable high angle of attack re-entry profile, the airframe is optimized for both performance and safety.
             </p>
             <Image

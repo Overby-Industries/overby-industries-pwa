@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Inter, Orbitron } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import "../styles/globals.css";
+import { Inter, Orbitron } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import "globals";
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['500', '600'],
-  variable: '--font-orbitron',
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-orbitron",
 });
 
 export const metadata: Metadata = {
@@ -35,9 +35,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -52,9 +49,7 @@ export default function RootLayout({
         />
         <meta name="msapplication-TileColor" content="#000000" />
       </head>
-      <body
-        className={`${inter.variable} ${orbitron.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${orbitron.variable} antialiased`}>
         {children}
         <Analytics />
         <SpeedInsights />

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwind/utilities";
+
+
+:root {
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-orbitron);
+  --background: #f9f9f9;
+  --foreground: #0c0c0c;
+}
+
+body {
+  background: var(--background);
+  font-family: var(--font-body);
+  color: var(--foreground);
+  /* box-shadow: 0 0 10px 4px rgba(0,255,255,0.6); */
+  /* filter: drop-shadow(0 0 6px rgba(34,211,238,0.7)); */
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, nav h2 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e0e0e;
+    --foreground: #ededed;
+  }
+}
+
+

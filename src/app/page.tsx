@@ -50,7 +50,7 @@ export default function Home() {
       <nav className={`nav${scrolled ? "nav-scrolled" : ""}`}>
         <Link href="/" className="nav-logo">
           <Image
-            src="/overby-logo-neon.svg"
+            src="/overby-logo.svg"
             alt="Overby Industries"
             width={32}
             height={32}

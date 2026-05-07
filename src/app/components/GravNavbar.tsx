@@ -22,10 +22,13 @@ export default function SubNavbar({
         </h1>
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/overby-logo-neon.svg"
+            src="/overby-logo.svg"
             alt="Overby Industries logo"
             width={80} // set to the actual height of your SVG
             height={80}
+            style={{
+              filter: "brightness(0.3) sepia(1) saturate(3) hue-rotate(10deg)",
+            }}
             // fill    // fills the parent dimensions
             // style={{ objectFit: "contain" }} // keep aspect ratio inside the box
             // layout="responsive"

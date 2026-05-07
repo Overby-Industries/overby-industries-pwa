@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overby Industries — Sustainable Industrial Future in Space</title>
+  <meta name="description" content="Committed to gathering and refining space resources ethically, sustainably, and with zero waste. Building an interplanetary civilization.">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="/manifest.json">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── CSS Variables ─────────────────────────────────────────── */
+    :root {
+      --paper:       #f5f2eb;
+      --ink:         #1a1814;
+      --blue:        #2a4a7f;
+      --red:         #8b1a1a;
+      --gold:        #b8962e;
+      --surface:     #ede9e0;
+      --rule:        #c8c0b0;
+      --ink-soft:    rgba(26,24,20,0.65);
+      --ink-faint:   rgba(26,24,20,0.35);
+
+      --serif:  'Instrument Serif', Georgia, serif;
+      --sans:   'Syne', sans-serif;
+      --mono:   'DM Mono', monospace;
+    }
+
+    /* ─── Reset & Base ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Utilities ─────────────────────────────────────────────── */
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .diamond {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    .rule-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+    }
+    .rule-divider::before,
+    .rule-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── Grid Paper Texture ────────────────────────────────────── */
+    .graph-bg {
+      position: relative;
+    }
+    .graph-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(26,24,20,0.06) 0px, rgba(26,24,20,0.06) 1px, transparent 1px, transparent 28px),
+        repeating-linear-gradient(90deg, rgba(26,24,20,0.06) 0px, rgba(26,24,20,0.06) 1px, transparent 1px, transparent 28px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .graph-bg > * { position: relative; z-index: 1; }
+
+    /* ─── Navigation ────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      gap: 32px;
+      transition: box-shadow 0.2s;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-logo img {
+      height: 32px;
+      width: auto;
+      filter: brightness(0.3) sepia(1) saturate(3) hue-rotate(10deg);
+    }
+    .nav-logo-text {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      flex: 1;
+      justify-content: center;
+    }
+    .nav-links a {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    .nav-cta {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--paper);
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      padding: 8px 18px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .nav-cta:hover { background: var(--blue); border-color: var(--blue); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      margin-left: auto;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 60px; left: 0; right: 0;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      padding: 24px 32px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 24px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ─── Hero ──────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 100px 80px 80px;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .hero-badge .eyebrow { margin-bottom: 0; }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.1;
+      color: var(--ink);
+      max-width: 820px;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    .hero-sub {
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--ink-soft);
+      max-width: 520px;
+      margin-bottom: 48px;
+    }
+
+    .btn-group { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 32px;
+      cursor: pointer;
+      border: 1px solid;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+    .btn-primary:hover { background: var(--blue); border-color: var(--blue); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--rule);
+    }
+    .btn-ghost:hover { border-color: var(--ink); }
+
+    .hero-rule {
+      margin-top: 72px;
+      width: 100%;
+    }
+
+    @media (max-width: 700px) {
+      #hero { padding: 100px 24px 60px; }
+      .hero-title { font-size: 36px; }
+    }
+
+    /* ─── Section base ──────────────────────────────────────────── */
+    section {
+      padding: 96px 80px;
+      border-bottom: 1px solid var(--rule);
+    }
+    @media (max-width: 700px) {
+      section { padding: 64px 24px; }
+    }
+
+    /* ─── Mission ───────────────────────────────────────────────── */
+    #mission .mission-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .mission-pull {
+      font-family: var(--serif);
+      font-size: clamp(26px, 3vw, 40px);
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--ink);
+      border-left: 3px solid var(--gold);
+      padding-left: 28px;
+    }
+    .mission-body {
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--ink-soft);
+    }
+    .mission-body p + p { margin-top: 16px; }
+    .values-list {
+      list-style: none;
+      margin-top: 28px;
+    }
+    .values-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-soft);
+      padding: 9px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .values-list li:last-child { border-bottom: none; }
+    @media (max-width: 900px) {
+      #mission .mission-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ─── Stats ─────────────────────────────────────────────────── */
+    #stats {
+      background: var(--surface);
+      padding: 60px 80px;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: var(--sans);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+    @media (max-width: 700px) {
+      #stats { padding: 40px 24px; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+      .stat-num { font-size: 28px; }
+    }
+
+    /* ─── Capabilities ──────────────────────────────────────────── */
+    .section-header { margin-bottom: 56px; }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .section-title em { font-style: italic; color: var(--blue); }
+    .section-lead {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--ink-soft);
+      max-width: 560px;
+      line-height: 1.85;
+    }
+
+    #capabilities .caps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--rule);
+    }
+    .cap-card {
+      background: var(--surface);
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 32px 28px;
+      transition: background 0.2s;
+    }
+    .cap-card:nth-child(3n) { border-right: none; }
+    .cap-card:nth-child(4),
+    .cap-card:nth-child(5),
+    .cap-card:nth-child(6) { border-bottom: none; }
+    .cap-card:hover { background: #e6e2d6; }
+    .cap-num {
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .cap-title {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .cap-desc {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+    @media (max-width: 900px) {
+      #capabilities .caps-grid { grid-template-columns: 1fr 1fr; }
+      .cap-card:nth-child(3n) { border-right: 1px solid var(--rule); }
+      .cap-card:nth-child(2n) { border-right: none; }
+      .cap-card:nth-child(4),
+      .cap-card:nth-child(5),
+      .cap-card:nth-child(6) { border-bottom: 1px solid var(--rule); }
+      .cap-card:last-child { border-bottom: none; }
+    }
+    @media (max-width: 600px) {
+      #capabilities .caps-grid { grid-template-columns: 1fr; }
+      .cap-card { border-right: none !important; }
+    }
+
+    /* ─── Roadmap ───────────────────────────────────────────────── */
+    #roadmap .roadmap-list {
+      margin-top: 0;
+      position: relative;
+      padding-left: 52px;
+    }
+    #roadmap .roadmap-list::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: var(--rule);
+    }
+    .roadmap-item {
+      position: relative;
+      padding-bottom: 52px;
+    }
+    .roadmap-item:last-child { padding-bottom: 0; }
+    .roadmap-dot {
+      position: absolute;
+      left: -44px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      background: var(--gold);
+      transform: rotate(45deg);
+    }
+    .roadmap-phase {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 6px;
+    }
+    .roadmap-name {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .roadmap-desc {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      max-width: 580px;
+      margin-bottom: 14px;
+    }
+    .funding-badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 8px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red);
+      border: 1px solid var(--red);
+      padding: 4px 10px;
+      opacity: 0.8;
+    }
+
+    /* ─── CTA / Join ────────────────────────────────────────────── */
+    #join {
+      text-align: center;
+      padding: 112px 80px;
+    }
+    .join-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    .join-title em { font-style: italic; color: var(--blue); }
+    .join-body {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--ink-soft);
+      max-width: 560px;
+      margin: 0 auto 48px;
+      line-height: 1.9;
+    }
+    #join .btn-group { justify-content: center; }
+
+    /* ─── Footer ────────────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 48px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-logo {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--paper);
+    }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: rgba(245,242,235,0.5);
+      text-align: center;
+    }
+    .footer-tagline {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      text-align: right;
+    }
+    @media (max-width: 700px) {
+      footer { padding: 40px 24px; flex-direction: column; text-align: center; }
+      .footer-tagline { text-align: center; }
+      #join { padding: 72px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="/" class="nav-logo" aria-label="Overby Industries Home">
+      <img src="/overby-logo-neon.svg" alt="Overby Industries Logo" onerror="this.style.display='none'">
+      <span class="nav-logo-text">Overby Industries</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/aerospace">Aerospace</a></li>
+      <li><a href="/isru">ISRU</a></li>
+      <li><a href="/heavy-industry">Heavy Industry</a></li>
+      <li><a href="/whitepapers">White Papers</a></li>
+      <li><a href="/the-gravastar-project">Gravastar Project</a></li>
+    </ul>
+
+    <a class="nav-cta" href="mailto:founder@overbyindustries.space?subject=Overby%20Industries%20Services%20Inquiry&body=Hello,%0A%0AI'm%20interested%20in%20investing%20in%20your%20space%20debris%20reclamation%20services.">Contact</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="/aerospace">Aerospace</a>
+    <a href="/isru">ISRU</a>
+    <a href="/heavy-industry">Heavy Industry</a>
+    <a href="/whitepapers">White Papers</a>
+    <a href="/the-gravastar-project">The Gravastar Project</a>
+    <a href="mailto:founder@overbyindustries.space?subject=Overby%20Industries%20Services%20Inquiry&body=Hello,%0A%0AI'm%20interested%20in%20investing%20in%20your%20space%20debris%20reclamation%20services.">Contact</a>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────────────────── -->
+  <section id="hero" class="graph-bg">
+    <div class="hero-badge fade-up">
+      <div class="diamond"></div>
+      <span class="eyebrow" style="margin-bottom:0">Ethical · Sustainable · Zero-Waste</span>
+      <div class="diamond"></div>
+    </div>
+
+    <h1 class="hero-title fade-up" style="transition-delay:0.08s">
+      Building a <em>Sustainable,<br>Ethical Industrial</em><br>Future in Space
+    </h1>
+
+    <p class="hero-sub fade-up" style="transition-delay:0.16s">
+      From metals and concrete on asteroids to hydrocarbons on Titan — Overby Industries provides everything humanity needs to build an interplanetary civilization without harming Earth or the solar system itself.
+    </p>
+
+    <div class="btn-group fade-up" style="transition-delay:0.24s">
+      <a href="#join" class="btn btn-primary">Join the Mission</a>
+      <a href="#roadmap" class="btn btn-ghost">View Roadmap</a>
+    </div>
+
+    <div class="hero-rule fade-up" style="transition-delay:0.32s">
+      <div class="rule-divider"><div class="diamond"></div></div>
+    </div>
+  </section>
+
+  <!-- ── Mission ────────────────────────────────────────────────── -->
+  <section id="mission">
+    <div class="mission-inner">
+      <div class="fade-up">
+        <span class="eyebrow">Mission Statement</span>
+        <p class="mission-pull">
+          "Committed to gathering and refining space resources ethically, sustainably, and with zero waste."
+        </p>
+      </div>
+      <div class="fade-up" style="transition-delay:0.12s">
+        <div class="mission-body">
+          <p>From metals and concrete on asteroids, to hydrocarbons on Titan, our mission is to provide everything humanity needs to build an interplanetary civilization without harming Earth or the solar system itself.</p>
+          <p>We operate under a philosophy of long-term stewardship — treating space not as a resource to be extracted, but as an ecosystem to be cultivated for generations to come.</p>
+        </div>
+        <ul class="values-list">
+          <li><div class="diamond"></div>Ethical, Zero-Waste Operations</li>
+          <li><div class="diamond"></div>Orbital Space Debris Reclamation Services</li>
+          <li><div class="diamond"></div>Sustainable Space Industry Development</li>
+          <li><div class="diamond"></div>Cutting-Edge Aerospace Engineering</li>
+          <li><div class="diamond"></div>Focus on Long-Term Space Civilizations and Direct Democracy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stats bar ──────────────────────────────────────────────── -->
+  <div id="stats">
+    <div class="stats-inner">
+      <div class="fade-up">
+        <span class="stat-num">5</span>
+        <div class="stat-label">Roadmap<br>Phases</div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.08s">
+        <span class="stat-num">0</span>
+        <div class="stat-label">Waste<br>Tolerance</div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.16s">
+        <span class="stat-num">∞</span>
+        <div class="stat-label">Solar System<br>Resources</div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.24s">
+        <span class="stat-num">2026</span>
+        <div class="stat-label">Founded &amp;<br>Operational</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Capabilities ───────────────────────────────────────────── -->
+  <section id="capabilities">
+    <div class="section-header fade-up">
+      <span class="eyebrow">Engineering Capabilities</span>
+      <h2 class="section-title">Full-Spectrum <em>Industrial</em><br>Space Operations</h2>
+      <p class="section-lead">Our technical stack spans the complete resource extraction and utilization pipeline — from launch vehicle to finished product in orbit.</p>
+    </div>
+
+    <div class="caps-grid">
+      <div class="cap-card fade-up">
+        <div class="cap-num">Cap. 01 — ISRU</div>
+        <div class="cap-title">Full-Spectrum ISRU</div>
+        <p class="cap-desc">Metals, stone, plastics, fuels — complete in-situ resource utilization across asteroid and planetary body types.</p>
+      </div>
+      <div class="cap-card fade-up" style="transition-delay:0.06s">
+        <div class="cap-num">Cap. 02 — Transport</div>
+        <div class="cap-title">Reusable Shuttle Fleet</div>
+        <p class="cap-desc">Starlifter II vehicles with runway landings — fully reusable, dramatically reducing per-mission cost and orbital debris.</p>
+      </div>
+      <div class="cap-card fade-up" style="transition-delay:0.12s">
+        <div class="cap-num">Cap. 03 — Propulsion</div>
+        <div class="cap-title">Advanced Propulsion</div>
+        <p class="cap-desc">Ion, Lorentz, and Solar Wind Capture systems enable deep-space operations without traditional propellant constraints.</p>
+      </div>
+      <div class="cap-card fade-up" style="transition-delay:0.18s">
+        <div class="cap-num">Cap. 04 — Platforms</div>
+        <div class="cap-title">Modular Industrial Platforms</div>
+        <p class="cap-desc">Scalable, modular platforms designed for rapid deployment and expansion — adaptable to any operational environment.</p>
+      </div>
+      <div class="cap-card fade-up" style="transition-delay:0.24s">
+        <div class="cap-num">Cap. 05 — Open Source</div>
+        <div class="cap-title">Open-Source Technology</div>
+        <p class="cap-desc">Commitment to open collaboration and knowledge-sharing accelerates industry-wide development of sustainable space systems.</p>
+      </div>
+      <div class="cap-card fade-up" style="transition-delay:0.30s">
+        <div class="cap-num">Cap. 06 — Debris</div>
+        <div class="cap-title">Orbital Debris Reclamation</div>
+        <p class="cap-desc">Proprietary reclamation services convert existing orbital debris into raw material feedstock — turning a liability into an asset.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Roadmap ────────────────────────────────────────────────── -->
+  <section id="roadmap" class="graph-bg">
+    <div class="section-header fade-up">
+      <span class="eyebrow">Development Roadmap</span>
+      <h2 class="section-title">Five Phases to a <em>Solar</em><br><em>Civilization</em></h2>
+      <p class="section-lead">Each phase builds upon the last — from prototype systems to a closed-loop resource economy spanning the entire solar system.</p>
+    </div>
+
+    <div class="roadmap-list">
+      <div class="roadmap-item fade-up">
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-phase">Phase I — Foundations</div>
+        <div class="roadmap-name">Prototype Systems &amp; First Mining Demo</div>
+        <p class="roadmap-desc">Prototype Starlifter systems and Miner Pods. Zero-debris mining demonstration on a Near-Earth Asteroid. Proof of concept for ethical extraction methodology.</p>
+        <span class="funding-badge">Requires Funding</span>
+      </div>
+
+      <div class="roadmap-item fade-up" style="transition-delay:0.08s">
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-phase">Phase II — Industrial Pilot</div>
+        <div class="roadmap-name">Operational Fleet &amp; Lunar Depot</div>
+        <p class="roadmap-desc">Operational Starlifter II fleet. Lunar depot established as staging ground. First profitable asteroid returns delivered to market.</p>
+        <span class="funding-badge">Requires Funding</span>
+      </div>
+
+      <div class="roadmap-item fade-up" style="transition-delay:0.16s">
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-phase">Phase III — Expansion</div>
+        <div class="roadmap-name">Belt Operations &amp; Mars Staging</div>
+        <p class="roadmap-desc">Asteroid belt exploitation begins. UHPC space construction deployed at scale. Mars staging posts established for deeper solar system access.</p>
+        <span class="funding-badge">Requires Funding</span>
+      </div>
+
+      <div class="roadmap-item fade-up" style="transition-delay:0.24s">
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-phase">Phase IV — Titan Era</div>
+        <div class="roadmap-name">Titan Hydrocarbon Extraction</div>
+        <p class="roadmap-desc">Titan Base begins extracting hydrocarbons for plastics and fuels production. Full ISRU integration across all operational zones achieved.</p>
+        <span class="funding-badge">Requires Funding</span>
+      </div>
+
+      <div class="roadmap-item fade-up" style="transition-delay:0.32s">
+        <div class="roadmap-dot"></div>
+        <div class="roadmap-phase">Phase V — Solar Civilization</div>
+        <div class="roadmap-name">Closed-Loop Solar Economy</div>
+        <p class="roadmap-desc">Closed-loop resource economy established across the Solar System. Overby Certification becomes the global standard for ethical space industry operations.</p>
+        <span class="funding-badge">Requires Funding</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Join the Mission ───────────────────────────────────────── -->
+  <section id="join">
+    <span class="eyebrow fade-up" style="display:block">Join the Mission</span>
+    <h2 class="join-title fade-up" style="transition-delay:0.08s">
+      Be Part of Humanity's<br><em>Next Great Leap</em>
+    </h2>
+    <p class="join-body fade-up" style="transition-delay:0.16s">
+      Whether as a small donor fueling our first prototypes, contributing hands-on experience, or as a major investor partnering for the future — your support powers Overby Industries. Every contribution, no matter how small, helps us take steps toward a sustainable future in space. Join the early supporters and be part of Overby Industries from the beginning.
+    </p>
+    <div class="btn-group fade-up" style="transition-delay:0.24s">
+      <a href="mailto:founder@overbyindustries.space?subject=Donation%20Inquiry&body=Hello,%0A%0AI'd%20like%20to%20support%20Overby%20Industries%20with%20a%20donation." class="btn btn-primary">Donate</a>
+      <a href="mailto:founder@overbyindustries.space?subject=Joining%20Overby%20Industries&body=Hello,%0A%0AI'm%20interested%20in%20joining%20the%20Overby%20Industries%20mission." class="btn btn-ghost">Join</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-logo">Overby Industries</div>
+    <div class="footer-copy">© 2026 Overby Industries. All Rights Reserved.</div>
+    <div class="footer-tagline">Ethical · Sustainable · Zero-Waste Space Economy</div>
+  </footer>
+
+  <!-- ── JavaScript ─────────────────────────────────────────────── -->
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll fade-up
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Hero loads immediately
+    window.addEventListener('load', () => {
+      document.querySelectorAll('#hero .fade-up').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), 120 + i * 90);
+      });
+    });
+
+    // Nav shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.style.boxShadow = window.scrollY > 20
+        ? '0 2px 20px rgba(26,24,20,0.07)'
+        : 'none';
+    }, { passive: true });
+
+    // Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
+
+  <!--
+  ══════════════════════════════════════════════════════════════
+  SAVE AS: /manifest.json
+  ══════════════════════════════════════════════════════════════
+  {
+    "name": "Overby Industries",
+    "short_name": "Overby",
+    "description": "Building a Sustainable, Ethical Industrial Future in Space",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f5f2eb",
+    "theme_color": "#f5f2eb",
+    "orientation": "portrait-primary",
+    "icons": [
+      { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+      { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    ]
+  }
+
+  ══════════════════════════════════════════════════════════════
+  SAVE AS: /sw.js
+  ══════════════════════════════════════════════════════════════
+  const CACHE = 'overby-v1';
+  const PRECACHE = ['/', '/index.html', '/overby-logo-neon.svg', '/manifest.json'];
+
+  self.addEventListener('install', event => {
+    event.waitUntil(caches.open(CACHE).then(c => c.addAll(PRECACHE)));
+    self.skipWaiting();
+  });
+
+  self.addEventListener('activate', event => {
+    event.waitUntil(
+      caches.keys().then(keys =>
+        Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+      )
+    );
+    self.clients.claim();
+  });
+
+  self.addEventListener('fetch', event => {
+    if (event.request.method !== 'GET') return;
+    event.respondWith(
+      caches.match(event.request).then(cached => {
+        if (cached) return cached;
+        return fetch(event.request).then(res => {
+          if (!res || res.status !== 200 || res.type !== 'basic') return res;
+          const clone = res.clone();
+          caches.open(CACHE).then(c => c.put(event.request, clone));
+          return res;
+        }).catch(() => caches.match('/index.html'));
+      })
+    );
+  });
+  ══════════════════════════════════════════════════════════════
+  -->
+
+</body>
+</html>

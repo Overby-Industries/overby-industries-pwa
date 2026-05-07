@@ -1,59 +1,58 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Inter, Orbitron } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "globals";
+import type { Metadata } from "next";
+import { Instrument_Serif, Syne, DM_Mono } from "next/font/google";
+import './globals.css'
 
-const inter = Inter({
+const instrumentSerif = Instrument_Serif({
+  weight: ["400"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-serif",
+  display: "swap",
 });
 
-const orbitron = Orbitron({
+const syne = Syne({
+  weight: ["400", "600", "700", "800"],
   subsets: ["latin"],
-  weight: ["500", "600"],
-  variable: "--font-orbitron",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const dmMono = DM_Mono({
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Overby Industries",
-  manifest: "/site.webmanifest",
-  description: "Building a Sustainable, Ethical Industrial Future in Space 🌌",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
+  title: "Overby Industries — Sustainable Industrial Future in Space",
+  description:
+    "Committed to gathering and refining space resources ethically, sustainably, and with zero waste.",
+  themeColor: "#f5f2eb",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="Overby Industries RSS Feed"
-          href="/updates/feed.xml"
-        />
-        <link
-          rel="alternate"
-          type="application/json"
-          title="Overby Industries JSON Feed"
-          href="/updates/feed.json"
-        />
-        <meta name="msapplication-TileColor" content="#000000" />
-      </head>
-      <body className={`${inter.variable} ${orbitron.variable} antialiased`}>
-        {children}
-        <Analytics />
-        <SpeedInsights />
-      </body>
+    <html
+      lang="en"
+      className={`${instrumentSerif.variable} ${syne.variable} ${dmMono.variable}`}
+    >
+      <body>{children}</body>
+      <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
+ 

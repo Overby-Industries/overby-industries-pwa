@@ -1,0 +1,14 @@
+{
+    "name": "Overby Industries",
+    "short_name": "Overby",
+    "description": "Building a Sustainable, Ethical Industrial Future in Space",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f5f2eb",
+    "theme_color": "#f5f2eb",
+    "orientation": "portrait-primary",
+    "icons": [
+      { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+      { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    ]
+  }

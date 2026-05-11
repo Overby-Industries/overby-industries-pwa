@@ -1,4 +1,12 @@
-import SubNavbar from "../components/GravNavbar";
+import type { ComponentType } from "react";
+import NavBar from "@/app/components/NavBar";
+
+type NavBarProps = {
+  title: string;
+  links: { href: string; label: string }[];
+};
+
+const TypedNavBar = NavBar as ComponentType<NavBarProps>;
 
 export default function GravastarProjectLayout({
   children,
@@ -7,7 +15,7 @@ export default function GravastarProjectLayout({
 }) {
   return (
     <>
-      <SubNavbar
+      <TypedNavBar
         title="The Gravastar Project"
         links={[
         ]}     

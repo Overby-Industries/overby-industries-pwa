@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { roadmap } from "@/app/content/roadmap";
 
 const CONTACT_HREF =
   "mailto:founder@overbyindustries.space?subject=Overby%20Industries%20Services%20Inquiry&body=Hello,%0A%0AI'm%20interested%20in%20investing%20in%20your%20space%20debris%20reclamation%20services.";
@@ -304,33 +305,7 @@ export default function Home() {
         </div>
 
         <div className="roadmap-list">
-          {[
-            {
-              phase: "Phase I — Foundations",
-              name: "Prototype Systems & First Mining Demo",
-              desc: "Prototype Starlifter systems and Miner Pods. Zero-debris mining demonstration on a Near-Earth Asteroid. Proof of concept for ethical extraction methodology.",
-            },
-            {
-              phase: "Phase II — Industrial Pilot",
-              name: "Operational Fleet & Lunar Depot",
-              desc: "Operational Starlifter II fleet. Lunar depot established as staging ground. First profitable asteroid returns delivered to market.",
-            },
-            {
-              phase: "Phase III — Expansion",
-              name: "Belt Operations & Mars Staging",
-              desc: "Asteroid belt exploitation begins. UHPC space construction deployed at scale. Mars staging posts established for deeper solar system access.",
-            },
-            {
-              phase: "Phase IV — Titan Era",
-              name: "Titan Hydrocarbon Extraction",
-              desc: "Titan Base begins extracting hydrocarbons for plastics and fuels production. Full ISRU integration across all operational zones achieved.",
-            },
-            {
-              phase: "Phase V — Solar Civilization",
-              name: "Closed-Loop Solar Economy",
-              desc: "Closed-loop resource economy established across the Solar System. Overby Certification becomes the global standard for ethical space industry operations.",
-            },
-          ].map(({ phase, name, desc }, i) => (
+          {roadmap.map(({ phase, name, desc, year }, i) => (
             <div
               className="roadmap-item fade-up"
               key={phase}
@@ -340,7 +315,7 @@ export default function Home() {
               <div className="roadmap-phase">{phase}</div>
               <div className="roadmap-name">{name}</div>
               <p className="roadmap-desc">{desc}</p>
-              <span className="funding-badge">Requires Funding</span>
+              <span className="funding-badge">{year}</span>
             </div>
           ))}
         </div>

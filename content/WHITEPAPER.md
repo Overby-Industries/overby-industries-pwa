@@ -76,8 +76,17 @@ Overby Industries sets the **Space Zero-Waste Standard**:
 ---
 
 ## 6. Roadmap Timeline
+### Milestones
+- **2026** *Foundations:* Create aerospace engineering drawings, avionics and all other embedded systems using C++. Document the build process with videos posted to this app.
+- **2028** *Experimental Amateur Build:* Rent hanger space and build E-AB aircraft and propulsion systems. Perform ground tests, taxi tests.
+- **2030** *Proof of Concept:* Fly 1:6 scaled manned E-AB test vehicle. Validate propulsion systems, avionics, and flight software during crewed orbital work.
+- **2030** *Low Orbit Demo:* Validate ISRU sensor packages and mining instrumentation in a real space environment.
+- **2030** *Near Earth Operations:* Deploy a small orbital platform. Begin debris capture experiments, establish first profitable debris capture contracts. Establish relationships with space agencies and commercial operators.
+- **2040** *Industrial Pilot:* Operational Starlifter II fleet. Lunar depot established. First profitable asteroid returns.
+- **2050** *Expansion:* Asteroid belt exploitation. UHPC space construction. Mars staging posts established.
+- **2050** *Titan Era:* Titan Base begins extracting hydrocarbons for plastics and fuels. Full ISRU integration. Overby Certification becomes global standard.
+- **2060** *Solar Civilization:* Closed-loop resource economy across Solar System.
 
-| Phase        | Years      | Milestones ||--------------|-----------|------------|| Foundations  | 2030–2040 | Starlifter prototypes, Miner Pod testbeds, NEA mining demo || Industrial Pilot | 2040–2055 | Fleet of Starlifter II, lunar depots, first profitable asteroid resources || Expansion    | 2055–2080 | UHPC structures in orbit, Mars staging post || Outer System | 2080–2100 | Titan Base, plastics and fuels economy || Civilization Scale | 2100+ | Full solar system closed-loop infrastructure, Overby Certification becomes global standard |
 ---
 
 ## 7. Market Opportunity

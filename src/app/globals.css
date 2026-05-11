@@ -1,7 +1,9 @@
 /* ─── Reset Tailwind base conflicts ─────────────────────────── */
-@tailwind base;
-@tailwind components;
+
 @tailwind utilities;
+@import "tailwindcss/preflight";
+
+
 
 /* ─── CSS Variables ──────────────────────────────────────────── */
 :root {
@@ -10,6 +12,7 @@
   --blue:      #2a4a7f;
   --red:       #8b1a1a;
   --gold:      #b8962e;
+  --dark-gold: #422b0d;
   --surface:   #ede9e0;
   --rule:      #c8c0b0;
   --ink-soft:  rgba(26, 24, 20, 0.65);
@@ -192,8 +195,8 @@ body {
   flex-shrink: 0;
 }
 .nav-cta:hover {
-  background: var(--blue);
-  border-color: var(--blue);
+  background: var(--dark-gold);
+  border-color: var(--gold);
 }
 .hamburger {
   display: none;
@@ -271,8 +274,8 @@ body {
   border-color: var(--ink);
 }
 .btn-primary:hover {
-  background: var(--blue);
-  border-color: var(--blue);
+  background: var(--dark-gold);
+  border-color: var(--gold);
 }
 .btn-ghost {
   background: transparent;
@@ -399,6 +402,119 @@ section {
 }
 .values-list li:last-child {
   border-bottom: none;
+}
+
+/* ─── Whitepaper Page ────────────────────────────────────────── */
+.whitepaper-page {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 120px 80px 96px;
+  min-height: 100vh;
+}
+
+.whitepaper-content {
+  max-width: 720px;
+  background: var(--paper);
+  margin: 0 auto;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+
+/* Headings */
+.whitepaper-content h1 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 24px;
+  line-height: 1.15;
+}
+.whitepaper-content h2 {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 56px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+.whitepaper-content h3 {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+/* Body */
+.whitepaper-content p {
+  margin-bottom: 16px;
+}
+.whitepaper-content strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.whitepaper-content em {
+  font-style: italic;
+  color: var(--blue);
+}
+
+/* Lists */
+.whitepaper-content ul,
+.whitepaper-content ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+.whitepaper-content li {
+  margin-bottom: 6px;
+}
+
+/* Rules / dividers */
+.whitepaper-content hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 48px 0;
+}
+
+/* Blockquotes */
+.whitepaper-content blockquote {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 24px);
+  font-style: italic;
+  color: var(--ink);
+  border-left: 3px solid var(--gold);
+  padding-left: 24px;
+  margin: 32px 0;
+}
+
+/* Code */
+.whitepaper-content code {
+  font-family: var(--mono);
+  font-size: 12px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 2px 6px;
+  color: var(--blue);
+}
+
+/* Download button */
+.whitepaper-download {
+  max-width: 720px;
+  margin: 56px auto 0;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 700px) {
+  .whitepaper-page { padding: 100px 24px 64px; }
 }
 
 /* ─── Stats bar ──────────────────────────────────────────────── */

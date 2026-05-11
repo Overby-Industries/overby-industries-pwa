@@ -208,7 +208,7 @@ export default function Home() {
       <div className="stats-bar">
         <div className="stats-inner">
           {[
-            { num: "5", label: "Roadmap\nPhases" },
+            { num: "8", label: "Roadmap\nPhases" },
             { num: "0", label: "Waste\nTolerance" },
             { num: "∞", label: "Solar System\nResources" },
             { num: "2026", label: "Founded &\nOperational" },
@@ -294,7 +294,7 @@ export default function Home() {
         <div className="section-header fade-up">
           <span className="eyebrow">Development Roadmap</span>
           <h2 className="section-title">
-            Five Phases to a <em>Solar</em>
+            Eight Phases to a <em>Solar</em>
             <br />
             <em>Civilization</em>
           </h2>

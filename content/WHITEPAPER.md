@@ -77,7 +77,7 @@ Overby Industries sets the **Space Zero-Waste Standard**:
 
 ## 6. Roadmap Timeline
 ### Milestones
-- **2026** *Foundations:* Create aerospace engineering drawings, avionics and all other embedded systems using C++. Document the build process with videos posted to this app.
+- **2026** *Foundations:* Create aerospace engineering drawings with pencil and paper. Build avionics and all other embedded systems using C++. Document the build process with videos posted to this app.
 - **2028** *Experimental Amateur Build:* Rent hanger space and build E-AB aircraft and propulsion systems. Perform ground tests, taxi tests.
 - **2030** *Proof of Concept:* Fly 1:6 scaled manned E-AB test vehicle. Validate propulsion systems, avionics, and flight software during crewed orbital work.
 - **2030** *Low Orbit Demo:* Validate ISRU sensor packages and mining instrumentation in a real space environment.

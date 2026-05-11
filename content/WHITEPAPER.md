@@ -29,8 +29,8 @@ Through reusable shuttlecraft (**Starlifter II**), autonomous miner/refinery pod
 - Establish a **Titan Moon Base** for hydrocarbons → plastics, polymers, and fuels.  
 - Provide **propellants** (H₂/O₂/CH₄) cracked from asteroid ice and CO₂.  
 
-✅ All operations operate under a **Zero-Pollution, Zero-Waste Certification.**  
-✅ Every residue (dust, slag, rock) is repurposed → shielding, bricks, aggregates.  
+All operations operate under a **Zero-Pollution, Zero-Waste Certification.**  
+Every residue (dust, slag, rock) is repurposed → shielding, bricks, aggregates.  
 
 ---
 

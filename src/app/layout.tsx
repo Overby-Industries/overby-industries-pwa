@@ -2,7 +2,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Instrument_Serif, Syne, DM_Mono } from "next/font/google";
-import './globals.css'
+import NavBar from "@/app/components/NavBar";
+import "./globals.css";
 
 const instrumentSerif = Instrument_Serif({
   weight: ["400"],
@@ -49,10 +50,12 @@ export default function RootLayout({
       lang="en"
       className={`${instrumentSerif.variable} ${syne.variable} ${dmMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <NavBar />
+        {children}
+      </body>
       <Analytics />
       <SpeedInsights />
     </html>
   );
 }
- 

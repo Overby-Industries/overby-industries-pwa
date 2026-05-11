@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AerospacePage() {
   return (
     <section className="px-8 py-20 text-white">
-      <h1 className="text-4xl font-bold mb-6">Aerospace</h1>
+      <h1 className="text-6xl font-bold mb-6">Aerospace</h1>
       <p className="max-w-2xl text-gray-300 m-4">
               Overby Industries presents Project Helga, a powered flight SSTO Heavy Lift Shuttle that takes off and lands on traditional runways, featuring a hypersonic double delta airfoil designed for optimal performance in the upper atmosphere. 
             </p>

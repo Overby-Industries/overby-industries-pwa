@@ -1,4 +1,12 @@
-import SubNavbar from "../components/GravNavbar";
+import type { ComponentType } from "react";
+import NavBar from "@/app/components/NavBar";
+
+type NavBarProps = {
+  title: string;
+  links: { href: string; label: string }[];
+};
+
+const TypedNavBar = NavBar as ComponentType<NavBarProps>;
 
 export default function WhitepapersLayout({
   children,
@@ -7,11 +15,7 @@ export default function WhitepapersLayout({
 }) {
   return (
     <>
-      <SubNavbar
-        title="White Papers"
-        links={[
-        ]}     
-      />
+      <TypedNavBar title="White Papers" links={[]} />
       {children}
     </>
   );

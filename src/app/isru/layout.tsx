@@ -1,4 +1,12 @@
-import SubNavbar from "../components/SubNavbar";
+import type { ComponentType } from "react";
+import NavBar from "@/app/components/NavBar";
+
+type NavBarProps = {
+  title: string;
+  links: { href: string; label: string }[];
+};
+
+const TypedNavBar = NavBar as ComponentType<NavBarProps>;
 
 export default function ISRULayout({
   children,
@@ -7,7 +15,7 @@ export default function ISRULayout({
 }) {
   return (
     <>
-      <SubNavbar
+      <TypedNavBar
         title="ISRU"
         links={[
           { label: "Regolith", href: "/isru/regolith" },

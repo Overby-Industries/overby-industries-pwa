@@ -1,4 +1,12 @@
-import SubNavbar from "../components/SubNavbar";
+import NavBar from "@/app/components/NavBar";
+import type { ComponentType } from "react";
+
+type NavBarProps = {
+  title: string;
+  links: { href: string; label: string }[];
+};
+
+const TypedNavBar = NavBar as ComponentType<NavBarProps>;
 
 export default function HeavyIndustryLayout({
   children,
@@ -7,7 +15,7 @@ export default function HeavyIndustryLayout({
 }) {
   return (
     <>
-      <SubNavbar
+      <TypedNavBar
         title="Heavy Industry"
         links={[
           { label: "Asteroid Mining", href: "/heavy-industry/asteroid-mining" },

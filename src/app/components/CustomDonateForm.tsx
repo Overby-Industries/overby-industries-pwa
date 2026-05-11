@@ -39,7 +39,7 @@ export default function CustomDonateForm() {
   };
 
   return (
-    <form onSubmit={handleDonate} className="flex flex-col items-center gap-4">
+    <form onSubmit={handleDonate} className="btn">
       <div className="flex items-center gap-2">
         <span className="text-xl font-medium text-gray-300">$</span>
         <input
@@ -49,14 +49,14 @@ export default function CustomDonateForm() {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           placeholder="Enter any amount"
-          className="rounded-lg bg-gray-800 px-4 py-2 text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-cyan-400"
+          className="btn"
         />
       </div>
       {error && <p className="text-sm text-red-400">{error}</p>}
       <button
         type="submit"
         disabled={loading}
-        className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-white transition hover:bg-cyan-600 disabled:opacity-50"
+        className="btn btn-primary"
       >
         {loading ? "Redirecting..." : "Donate"}
       </button>

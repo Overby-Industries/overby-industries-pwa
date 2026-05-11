@@ -51,7 +51,7 @@ export default async function WhitePaperPage() {
 
   return (
     <>
-      <main className="whitepaper-page">
+      <main className="whitepaper-page graph-bg">
         <div className="whitepaper-content">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
         </div>

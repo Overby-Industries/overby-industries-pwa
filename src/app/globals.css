@@ -12,6 +12,7 @@
   --blue:      #2a4a7f;
   --red:       #8b1a1a;
   --gold:      #b8962e;
+  --dark-gold: #422b0d;
   --surface:   #ede9e0;
   --rule:      #c8c0b0;
   --ink-soft:  rgba(26, 24, 20, 0.65);
@@ -194,8 +195,8 @@ body {
   flex-shrink: 0;
 }
 .nav-cta:hover {
-  background: var(--blue);
-  border-color: var(--blue);
+  background: var(--dark-gold);
+  border-color: var(--gold);
 }
 .hamburger {
   display: none;
@@ -273,8 +274,8 @@ body {
   border-color: var(--ink);
 }
 .btn-primary:hover {
-  background: var(--blue);
-  border-color: var(--blue);
+  background: var(--dark-gold);
+  border-color: var(--gold);
 }
 .btn-ghost {
   background: transparent;
@@ -413,6 +414,7 @@ section {
 
 .whitepaper-content {
   max-width: 720px;
+  background: var(--paper);
   margin: 0 auto;
   font-family: var(--mono);
   font-size: 13px;

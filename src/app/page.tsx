@@ -125,7 +125,7 @@ export default function Home() {
         <div className="hero-badge fade-up">
           <span className="diamond" />
           <span className="eyebrow eyebrow--no-margin">
-            Ethical · Sustainable · Zero-Waste
+            Ethical · Sustainable · Zero-Waste Space Economy
           </span>
           <span className="diamond" />
         </div>
@@ -241,7 +241,7 @@ export default function Home() {
           <p className="section-lead">
             Our technical stack spans the complete resource extraction and
             utilization pipeline — from launch vehicle to finished product in
-            orbit.
+            orbit. Hand-crafted aerospace systems engineering rooted in traditional paper-and-pencil drafting, layered systems visualization, and iterative engineering design.
           </p>
         </div>
 

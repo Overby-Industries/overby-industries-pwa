@@ -18,7 +18,7 @@ export default function Roadmap() {
             key={idx}
             year={milestone.year}
             title={milestone.title}
-            description={milestone.description}
+            description={milestone.desc}
             align={idx % 2 === 0 ? "left" : "right"}
           />
         ))}

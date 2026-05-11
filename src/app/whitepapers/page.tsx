@@ -7,20 +7,15 @@ export default async function WhitePaperPage() {
   const markdown = await getMarkdown("WHITEPAPER.md");
 
   return (
-    <main className="bg-gray-950 text-gray-200 py-16 px-6 md:px-12 lg:px-24">
-      <div className="prose prose-invert max-w-none prose-headings:text-cyan-400 prose-a:text-cyan-300 prose-strong:text-white">
+    <main className="whitepaper-page">
+      <div className="whitepaper-content">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
       </div>
-      <div className="text-center mt-12">
-        <a
-          href="/WHITEPAPERS_OVERBY_INDUSTRIES.pdf"
-          download
-          className="px-8 py-4 rounded-lg bg-cyan-500 hover:bg-cyan-600 transition text-white font-semibold"
-        >
-          📄 Download Full PDF
+      <div className="whitepaper-download">
+        <a href="/WHITEPAPERS_OVERBY_INDUSTRIES.pdf" download className="btn btn-primary">
+          Download Full PDF
         </a>
       </div>
     </main>
   );
 }
-

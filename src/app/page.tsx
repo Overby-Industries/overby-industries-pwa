@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { roadmap } from "@/app/content/roadmap";
+import CustomDonateForm from "@/app/components/CustomDonateForm";
+import SignupForm from "@/app/landing-page/SignupForm";
 
 const CONTACT_HREF =
   "mailto:founder@overbyindustries.space?subject=Overby%20Industries%20Services%20Inquiry&body=Hello,%0A%0AI'm%20interested%20in%20investing%20in%20your%20space%20debris%20reclamation%20services.";
@@ -343,18 +345,8 @@ export default function Home() {
           className="btn-group fade-up"
           style={{ justifyContent: "center", transitionDelay: "0.24s" }}
         >
-          <a
-            href="mailto:founder@overbyindustries.space?subject=Donation%20Inquiry&body=Hello,%0A%0AI'd%20like%20to%20support%20Overby%20Industries."
-            className="btn btn-primary"
-          >
-            Donate
-          </a>
-          <a
-            href="mailto:founder@overbyindustries.space?subject=Joining%20Overby%20Industries&body=Hello,%0A%0AI'm%20interested%20in%20joining%20the%20Overby%20Industries%20mission."
-            className="btn btn-ghost"
-          >
-            Join
-          </a>
+          <CustomDonateForm />
+          <SignupForm />
         </div>
       </section>
 

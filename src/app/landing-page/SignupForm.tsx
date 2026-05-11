@@ -33,7 +33,7 @@ export default function SignupForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto flex max-w-md flex-col items-center gap-4 sm:flex-row"
+      className="btn"
     >
       <input
         type="email"
@@ -41,12 +41,12 @@ export default function SignupForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="w-full rounded-lg bg-gray-800 px-4 py-4 text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-cyan-400"
+        className="btn"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="rounded-lg bg-cyan-500 px-4 py-4 font-semibold text-white hover:bg-cyan-600 disabled:opacity-50"
+        className="btn btn-primary"
       >
         {status === "loading" ? "Submitting..." : "Join"}
       </button>

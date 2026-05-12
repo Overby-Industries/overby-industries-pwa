@@ -27,5 +27,16 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cSpell.words": [
+    "ABEP",
+    "Graphene",
+    "ISRU",
+    "Magnetohydrodynamic",
+    "megastructures",
+    "Overby",
+    "Starlifter",
+    "supercapacitors",
+    "UHPC"
+  ]
 }

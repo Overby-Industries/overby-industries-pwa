@@ -9,7 +9,7 @@
 ## 1. Executive Summary
 Overby Industries is committed to building the resources backbone of a solar system economy without repeating the environmental damage caused by terrestrial extraction.  
 
-Through reusable shuttlecraft (**Starlifter II**), autonomous miner/refinery pods, and distributed In-Situ Resource Utilization (ISRU) systems, we will deliver **metals, aggregates, plastics, and fuels** for space construction and expansion — with **zero debris, zero waste**.  
+Through reusable shuttle craft (**Starlifter II**), autonomous miner/refinery pods, and distributed In-Situ Resource Utilization (ISRU) systems, we will deliver **metals, aggregates, plastics, and fuels** for space construction and expansion — with **zero debris, zero waste**.  
 
 **Mission:** To become the **ethical steward** of humanity’s industrial expansion into space.  
 
@@ -39,10 +39,9 @@ Every residue (dust, slag, rock) is repurposed → shielding, bricks, aggregates
 **4.1 Starlifter II Shuttle**  
 - Fully reusable runway-landing spacecraft.  
 - Hybrid propulsion:  
-  - **Ion thrusters** (in space + Air-Breathing Electric Propulsion in atmosphere).  
-  - **Lorentz rail accelerators** (boost maneuvers).  
-  - **MHD solar-wind dynamo** for power & thrust.  
-- **Ionic liquids** serve as propellant, electrolyte, and *internal thermal shielding* during reentry.  
+  - **Dual mode ABEP Ion thrusters, solar-wind dynamo** (solar wind capture in deep space + Air-Breathing Electric Propulsion in atmosphere).  
+  - **MHD-Lorentz rail accelerators** for power & thrust (boost maneuvers).   
+- **Ionic liquids** serve as propellant from auxiliary tanks, electrolytes for advanced battery, and *internal thermal shielding* from main tanks during reentry.  
 
 **4.2 Autonomous Miner/Refinery Pods**  
 - Anchored drill rigs + **expandable containment bag systems** (based on NASA ARM concepts).  

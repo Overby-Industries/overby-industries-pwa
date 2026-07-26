@@ -97,7 +97,7 @@ Overby Industries sets the **Space Zero-Waste Standard**:
 ---
 
 ## 8. Closing Statement
-Overby Industries is not simply a mining company.  
+Overby Industries is not simply a mining company, it is a movement to build humanity’s future in space.
 
 We are the **infrastructure backbone** for an interplanetary civilization.  
 
@@ -106,7 +106,16 @@ Our operations will:
 - Create sustainable habitats **built from asteroids**.  
 - Fuel fleets with **resources drawn responsibly from Titan and beyond**.  
 
+**Join us**:
 Investing in Overby Industries means **investing in humanity’s sustainable expansion into the cosmos.**  
+
+- Support the mission through donations or investment.
+- Contribute code, designs, or research.
+- Help spread the vision of ethical space industrialization.
+
+**Contact**: founder@overbyindustries.space  
+**Website**: https://overbyindustries.space  
+**GitHub**: https://github.com/Overby-Industries
 
 ---
 

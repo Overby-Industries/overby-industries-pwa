@@ -1,0 +1,339 @@
+/* ═══════════════════════════════════════════════════════════════
+   ISRU Page — page.module.css
+   Page-specific styles only. Shared utilities (.eyebrow, .diamond,
+   .rule-divider, .fade-up, .graph-bg) live in globals.css.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Layout containers ───────────────────────────────────────── */
+.heroSection {
+  padding: 7rem 1.5rem 4rem;
+}
+
+.section {
+  padding: 4rem 1.5rem 5rem;
+}
+
+.ctaSection {
+  padding: 4rem 1.5rem 6rem;
+}
+
+.inner3xl {
+  max-width: 48rem;
+  text-align: start;
+  margin: 0 auto;
+}
+
+.inner4xl {
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.inner5xl {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* ── Divider wrapper ─────────────────────────────────────────── */
+.dividerWrapper {
+  padding: 2.5rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+.heroH1 {
+  font-family: var(--serif);
+  font-size: clamp(42px, 8vw, 80px);
+  font-weight: 500;
+  line-height: 1.08;
+  color: var(--ink);
+  margin-bottom: 1.75rem;
+}
+
+.h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 5vw, 46px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+
+.blueItalic {
+  color: var(--blue);
+  font-style: italic;
+}
+
+.bodyText {
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--ink);
+  max-width: 640px;
+  margin-bottom: 3rem;
+}
+
+.ctaBody {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Stats row ───────────────────────────────────────────────── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.statBlock {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 768px) {
+  .statBlock {
+    border-bottom: none;
+    border-right: 1px solid var(--rule);
+  }
+  .statBlock:last-child {
+    border-right: none;
+  }
+}
+
+.statNumber {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.statSub {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+/* ── Card grids ──────────────────────────────────────────────── */
+.cardsGrid3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .cardsGrid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cardsGrid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .cardsGrid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Individual card ─────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 2rem;
+}
+
+.card h3 {
+  font-family: var(--serif);
+  color: var(--red);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.card p {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+.shapeIcon {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.goldTag {
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.85rem;
+  font-weight: 500;
+}
+
+/* ── Technical challenges grid ───────────────────────────────── */
+.challengesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3rem;
+  row-gap: 0;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .challengesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.challengeCard {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.challengeCard h3 {
+  font-family: var(--serif);
+  color: var(--red);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.challengeCard p {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--ink);
+}
+
+/* ── Resource pipeline grid ──────────────────────────────────── */
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .resourcesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .resourcesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.resourceCol h3 {
+  font-family: var(--serif);
+  color: var(--red);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.sourceLine {
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.85rem;
+  font-weight: 500;
+}
+
+.resourceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resourceList li {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--ink);
+  padding-left: 1.1em;
+  position: relative;
+}
+
+.resourceList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* ── CTA links ───────────────────────────────────────────────── */
+.ctaLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .ctaLinks {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.ctaLink {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.ctaLink:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}

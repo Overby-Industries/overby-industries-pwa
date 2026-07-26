@@ -261,17 +261,6 @@ export default function Home() {
           <SignupForm />
         </div>
       </section>
-
-      {/* ── Footer ── */}
-      <footer className="site-footer">
-        <div className="footer-logo">Overby Industries</div>
-        <div className="footer-copy">
-          © 2026 Overby Industries. All Rights Reserved.
-        </div>
-        <div className="footer-tagline">
-          Ethical · Sustainable · Zero-Waste Space Economy
-        </div>
-      </footer>
     </>
   );
 }

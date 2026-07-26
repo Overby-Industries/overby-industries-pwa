@@ -327,10 +327,16 @@ Solar wind capture thrust levels are low compared to primary drive systems but o
           paddingTop: 40,
           borderTop: "1px solid var(--rule)",
           maxWidth: 960,
+          display: "flex",
+          gap: 16,
+          flexWrap: "wrap",
         }}
       >
         <a href="/aerospace" className="btn btn-ghost">
           ← Back to Aerospace
+        </a>
+        <a href="/aerospace/operating-systems" className="btn btn-primary">
+          Operating Systems →
         </a>
       </div>
 

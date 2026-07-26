@@ -3,6 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Instrument_Serif, Syne, DM_Mono } from "next/font/google";
 import NavBar from "@/app/components/NavBar";
+import Footer from "@/app/components/Footer";
 import "./globals.css";
 
 const instrumentSerif = Instrument_Serif({
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body>
         <NavBar />
         {children}
+        <Footer />
       </body>
       <Analytics />
       <SpeedInsights />

@@ -774,6 +774,27 @@ section {
   color: rgba(245, 242, 235, 0.5);
   text-align: center;
 }
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-social a {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(245, 242, 235, 0.3);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.footer-social a:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
 .footer-tagline {
   font-family: var(--mono);
   font-size: 10px;
@@ -804,6 +825,7 @@ section {
   .join-section { padding: 72px 24px; }
   .site-footer { padding: 40px 24px; flex-direction: column; text-align: center; }
   .footer-tagline { text-align: center; }
+  .footer-social { justify-content: center; }
   .caps-grid { grid-template-columns: 1fr; }
   .cap-card { border-right: none !important; }
 }

@@ -97,7 +97,7 @@ export default function NavBar() {
   return (
     <>
       {/* ── Navigation ── */}
-      <nav className={`nav${scrolled ? "nav-scrolled" : ""}`}>
+      <nav className={`nav${scrolled ? " nav-scrolled" : ""}`}>
         <Link href="/" className="nav-logo">
           <Image
             src="/overby-logo.svg"
@@ -160,7 +160,7 @@ export default function NavBar() {
 
         <button
           type="button"
-          className={`hamburger${menuOpen ? "open" : ""}`}
+          className={`hamburger${menuOpen ? " open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen ? "true" : "false"} // Fixed invalid ARIA attribute value
@@ -171,7 +171,7 @@ export default function NavBar() {
         </button>
       </nav>
 
-      <nav className={`mobile-menu${menuOpen ? "open" : ""}`}>
+      <nav className={`mobile-menu${menuOpen ? " open" : ""}`}>
         {NAV_ITEMS.map((item) => (
           <div key={item.href} className="mobile-menu-group">
             <Link href={item.href} onClick={() => setMenuOpen(false)}>

@@ -50,7 +50,7 @@ export default function AirframePage() {
       {/* ── Additional views ── */}
       <div style={{ maxWidth: 960, marginBottom: 96 }}>
         <div className="fade-up" style={{ marginBottom: 40 }}>
-          <span className="eyebrow">Structural Views · Rear &amp; Starboard</span>
+          <span className="eyebrow">Structural Views · Planform &amp; Perspective</span>
           <h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 400, color: "var(--ink)", lineHeight: 1.2, marginBottom: 16 }}>
             The Structure Behind {" "}
             <em style={{ fontStyle: "italic", color: "var(--blue)" }}>the Skin</em>
@@ -58,25 +58,25 @@ export default function AirframePage() {
           <p style={{ fontFamily: "var(--mono)", fontSize: 13, color: "var(--ink-soft)", lineHeight: 1.9, maxWidth: 680 }}>
             The perspective, plan, port, and front views are covered on the{" "}
             <a href="/aerospace" style={{ color: "var(--blue)" }}>Aerospace overview page</a>.
-            The rear and starboard views below show the nacelle integration and spline
-            wing-body fairing that carry the propulsion and thermal management systems.
+            The planform and three-quarter views below show the double-delta wing sweep
+            and blended wing-body integration in full.
           </p>
         </div>
 
         {[
           {
-            src: "/helga-rear.png",
-            alt: "Project Helga — rear view",
-            label: "Fig. 05 — Rear Elevation",
+            src: "/helga-top.png",
+            alt: "Project Helga — planform view",
+            label: "Fig. 05 — Planform View",
             caption:
-              "The rear nacelle section houses the MHD-Lorentz rail accelerator exit and ionic liquid afterburner stage. The broad, flattened aft cross-section doubles as a base-drag reduction surface at hypersonic cruise and a thermal radiator area during orbital coast phases.",
+              "The top-down planform view shows the double-delta wing sweep in full, illustrating how the cranked leading edge blends continuously into the fuselage without a discrete wing-root junction.",
           },
           {
-            src: "/helga-spline-foil-starboard-side-profile-view.png",
-            alt: "Project Helga — starboard spline airfoil profile",
-            label: "Fig. 06 — Starboard Spline Profile",
+            src: "/project-helga.png",
+            alt: "Project Helga — three-quarter perspective view",
+            label: "Fig. 06 — Three-Quarter Perspective",
             caption:
-              "The spline airfoil transition from wing root to tip is a continuously variable curve rather than a series of straight structural panels — distributing aerodynamic and thermal loads smoothly across the wing-body junction instead of concentrating them at discrete panel joints.",
+              "The three-quarter view shows the blended wing lifting body as a single continuous surface, carrying the vehicle across its full flight envelope from subsonic approach to hypersonic reentry.",
           },
         ].map(({ src, alt, label, caption }, i) => (
           <div key={label} className="fade-up" style={{ marginBottom: 56, transitionDelay: `${i * 0.06}s` }}>

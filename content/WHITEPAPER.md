@@ -9,7 +9,7 @@
 ## 1. Executive Summary
 Overby Industries is committed to building the resources backbone of a solar system economy without repeating the environmental damage caused by terrestrial extraction.  
 
-Through reusable shuttle craft (**Starlifter II**), autonomous miner/refinery pods, and distributed In-Situ Resource Utilization (ISRU) systems, we will deliver **metals, aggregates, plastics, and fuels** for space construction and expansion — with **zero debris, zero waste**.  
+Through reusable shuttlecraft (**Starlifter II**), autonomous miner/refinery pods, and distributed In-Situ Resource Utilization (ISRU) systems, we will deliver **metals, aggregates, plastics, and fuels** for space construction and expansion — with **zero debris, zero waste**.  
 
 **Mission:** To become the **ethical steward** of humanity’s industrial expansion into space.  
 
@@ -29,8 +29,8 @@ Through reusable shuttle craft (**Starlifter II**), autonomous miner/refinery po
 - Establish a **Titan Moon Base** for hydrocarbons → plastics, polymers, and fuels.  
 - Provide **propellants** (H₂/O₂/CH₄) cracked from asteroid ice and CO₂.  
 
-All operations operate under a **Zero-Pollution, Zero-Waste Certification.**  
-Every residue (dust, slag, rock) is repurposed → shielding, bricks, aggregates.  
+✅ All operations operate under a **Zero-Pollution, Zero-Waste Certification.**  
+✅ Every residue (dust, slag, rock) is repurposed → shielding, bricks, aggregates.  
 
 ---
 
@@ -39,9 +39,10 @@ Every residue (dust, slag, rock) is repurposed → shielding, bricks, aggregates
 **4.1 Starlifter II Shuttle**  
 - Fully reusable runway-landing spacecraft.  
 - Hybrid propulsion:  
-  - **Dual mode ABEP Ion thrusters, solar-wind dynamo** (solar wind capture in deep space + Air-Breathing Electric Propulsion in atmosphere).  
-  - **MHD-Lorentz rail accelerators** for power & thrust (boost maneuvers).   
-- **Ionic liquids** serve as propellant from auxiliary tanks, electrolytes for advanced battery, and *internal thermal shielding* from main tanks during reentry.  
+  - **Ion thrusters** (in space + Air-Breathing Electric Propulsion in atmosphere).  
+  - **Lorentz rail accelerators** (boost maneuvers).  
+  - **MHD solar-wind dynamo** for power & thrust.  
+- **Ionic liquids** serve as propellant, electrolyte, and *internal thermal shielding* during reentry.  
 
 **4.2 Autonomous Miner/Refinery Pods**  
 - Anchored drill rigs + **expandable containment bag systems** (based on NASA ARM concepts).  
@@ -75,17 +76,8 @@ Overby Industries sets the **Space Zero-Waste Standard**:
 ---
 
 ## 6. Roadmap Timeline
-### Milestones
-- **2026** *Foundations:* Create aerospace engineering drawings with pencil and paper. Build avionics and all other embedded systems using C++. Document the build process with videos posted to this app.
-- **2028** *Experimental Amateur Build:* Rent hanger space and build E-AB aircraft and propulsion systems. Perform ground tests, taxi tests.
-- **2030** *Proof of Concept:* Fly 1:6 scaled manned E-AB test vehicle. Validate propulsion systems, avionics, and flight software during crewed orbital work.
-- **2030** *Low Orbit Demo:* Validate ISRU sensor packages and mining instrumentation in a real space environment.
-- **2030** *Near Earth Operations:* Deploy a small orbital platform. Begin debris capture experiments, establish first profitable debris capture contracts. Establish relationships with space agencies and commercial operators.
-- **2040** *Industrial Pilot:* Operational Starlifter II fleet. Lunar depot established. First profitable asteroid returns.
-- **2050** *Expansion:* Asteroid belt exploitation. UHPC space construction. Mars staging posts established.
-- **2050** *Titan Era:* Titan Base begins extracting hydrocarbons for plastics and fuels. Full ISRU integration. Overby Certification becomes global standard.
-- **2060** *Solar Civilization:* Closed-loop resource economy across Solar System.
 
+| Phase        | Years      | Milestones ||--------------|-----------|------------|| Foundations  | 2030–2040 | Starlifter prototypes, Miner Pod testbeds, NEA mining demo || Industrial Pilot | 2040–2055 | Fleet of Starlifter II, lunar depots, first profitable asteroid resources || Expansion    | 2055–2080 | UHPC structures in orbit, Mars staging post || Outer System | 2080–2100 | Titan Base, plastics and fuels economy || Civilization Scale | 2100+ | Full solar system closed-loop infrastructure, Overby Certification becomes global standard |
 ---
 
 ## 7. Market Opportunity
@@ -97,7 +89,7 @@ Overby Industries sets the **Space Zero-Waste Standard**:
 ---
 
 ## 8. Closing Statement
-Overby Industries is not simply a mining company, it is a movement to build humanity’s future in space.
+Overby Industries is not simply a mining company.  
 
 We are the **infrastructure backbone** for an interplanetary civilization.  
 
@@ -106,16 +98,7 @@ Our operations will:
 - Create sustainable habitats **built from asteroids**.  
 - Fuel fleets with **resources drawn responsibly from Titan and beyond**.  
 
-**Join us**:
 Investing in Overby Industries means **investing in humanity’s sustainable expansion into the cosmos.**  
-
-- Support the mission through donations or investment.
-- Contribute code, designs, or research.
-- Help spread the vision of ethical space industrialization.
-
-**Contact**: founder@overbyindustries.space  
-**Website**: https://overbyindustries.space  
-**GitHub**: https://github.com/Overby-Industries
 
 ---
 

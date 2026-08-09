@@ -43,6 +43,7 @@ const NAV_ITEMS: NavItem[] = [
   },
   { label: "White Papers", href: "/whitepapers" },
   { label: "Gravastar Project", href: "/the-gravastar-project" },
+  { label: "FreeFlight", href: "https://freeflight.overbyindustries.space" },
 ];
 
 export default function NavBar() {

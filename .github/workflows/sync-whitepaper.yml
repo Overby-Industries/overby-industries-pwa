@@ -1,0 +1,46 @@
+name: Sync Whitepaper Content
+
+# Keeps content/WHITEPAPER.md and the downloadable PDF on the /whitepapers
+# page in sync with the canonical source in Overby-Industries/whitepapers,
+# instead of the two drifting apart as hand-copied duplicates.
+#
+# NOTE: GitHub only runs `schedule` triggers on the repo's default branch
+# (main), so this cron won't fire until this workflow lands on main. Until
+# then (or any time), it can still be run manually via workflow_dispatch on
+# whatever branch it's checked out on.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Monday 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest whitepaper markdown
+        run: |
+          curl -sf "https://raw.githubusercontent.com/Overby-Industries/whitepapers/main/papers/2025-overby-industries-vision/overby-industries-vision.md" \
+            -o content/WHITEPAPER.md
+
+      - name: Fetch latest built PDF (if the whitepapers repo has produced one)
+        run: |
+          if curl -sf "https://raw.githubusercontent.com/Overby-Industries/whitepapers/main/dist/overby-industries-vision.pdf" \
+              -o public/WHITEPAPERS_OVERBY_INDUSTRIES.pdf; then
+            echo "Fetched latest built PDF."
+          else
+            echo "No built PDF at whitepapers/dist/ yet -- keeping the existing one. This resolves itself once that repo's own CI produces one (see Overby-Industries/whitepapers#1)."
+          fi
+
+      - name: Commit changes if any
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add content/WHITEPAPER.md public/WHITEPAPERS_OVERBY_INDUSTRIES.pdf
+          git diff --cached --quiet || git commit -m "Sync whitepaper content from Overby-Industries/whitepapers"
+          git push

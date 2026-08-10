@@ -29,16 +29,33 @@ const dmMono = DM_Mono({
   display: "swap",
 });
 
+const siteUrl = "https://overbyindustries.space";
+const siteTitle = "Overby Industries — Sustainable Industrial Future in Space";
+const siteDescription =
+  "Committed to gathering and refining space resources ethically, sustainably, and with zero waste.";
+
 export const metadata: Metadata = {
-  title: "Overby Industries — Sustainable Industrial Future in Space",
-  description:
-    "Committed to gathering and refining space resources ethically, sustainably, and with zero waste.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
   themeColor: "#f5f2eb",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
   },
   manifest: "/manifest.json",
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Overby Industries",
+    title: siteTitle,
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({
